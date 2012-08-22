@@ -5,8 +5,15 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem "simple_form", "~> 2.0.2"
+
+group :production do
+  gem 'pg'
+end
+
+group :development do
+  gem 'sqlite3'
+end
 
 
 # Gems used only for assets and not required
