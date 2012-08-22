@@ -1,0 +1,6 @@
+<h1>Create New Contestant</h1>
+<%= simple_form_for @contestant, :html => { class: 'form-vertical' } do |f| %>
+	<%= f.input :name %>
+	<%= f.input :image_url %>
+	<%= f.submit "Create", class: "btn btn-primary" %>
+<% end %>

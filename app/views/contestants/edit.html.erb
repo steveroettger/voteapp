@@ -1,0 +1,6 @@
+<h1>Edit Contestant</h1>
+<%= simple_form_for @contestant, :html => { class: 'form-vertical' } do |f| %>
+	<%= f.input :name %>
+	<%= f.input :image_url %>
+	<%= f.submit "Update", class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,28 @@
+// Override Bootstrap Styles
+
+@import "bootstrap";
+
+body {  }
+
+@import "bootstrap-responsive";
+
+.span6 {
+	ul { 
+		list-style: none; 
+		
+		li { 
+			padding-bottom: 20px;
+			
+			a.name { 
+				font-size: 16px; 
+				font-weight: bold;  
+				&:hover { text-decoration: none; }
+			}
+		}
+	}
+	
+	img {
+		width: 65px;
+		height: 80px;
+	}
+}
