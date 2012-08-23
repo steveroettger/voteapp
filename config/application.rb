@@ -59,6 +59,7 @@ module FacebookApp
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     
+    # This fixes the asset:precompile task during slug compilation
     config.assets.initialize_on_precompile = false
   end
 end
