@@ -2,11 +2,13 @@
 
 @import "bootstrap";
 
-body { margin-left: 30px; }
+body { 
+	margin: 0 auto;
+}
 
 @import "bootstrap-responsive";
 
-.span6 {
+.contestant-index {
 	ul { 
 		list-style: none; 
 		
