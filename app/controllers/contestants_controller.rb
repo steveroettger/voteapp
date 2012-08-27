@@ -5,9 +5,10 @@ class ContestantsController < ApplicationController
   end
   
   def channel
-    respond_to do |format|
-      format.html { render :inline => '<script src="<%=request.protocal%>//connect.facebook.net/en_US/all.js"></script>'}
-  end
+     respond_to do |format|
+       format.html { render :inline => '<script src="<%=request.protocol%>//connect.facebook.net/en_US/all.js"></script>' }
+     end
+   end
   
   def new
     @contestant = Contestant.new
