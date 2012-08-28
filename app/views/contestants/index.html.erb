@@ -1,17 +1,18 @@
 <section class="contestant-index">
-  <% if user_likes_page? %>			
+  <%# if user_likes_page? %>			
     <h1>Vote For Your Favorite Driver</h1>
     <ul>
       <% @contestants.each do |contestant| %>
-        <li>
+        <li class="accordion-toggle">
 	      <%= link_to image_tag(contestant.image_url), contestant %>
 	      <%= link_to contestant.name, contestant, class: 'name' %>
-	      <%= link_to "up", vote_contestant_path(contestant, type: "up"), 
+	      <%= pluralize contestant.reputation_value_for(:votes).to_i, "vote" %>
+		  <%= link_to "up", vote_contestant_path(contestant, type: "up"), 
 			  method: "post" %>
 	    </li>
       <% end %>
     </ul>
-  <% else %>
-    <h1>Like This Page To Vote For Your Favorite Driver</h1>
-  <% end %> 
+  <%# else %>
+    <!--<h1>Like This Page To Vote For Your Favorite Driver</h1>-->
+  <%# end %> 
 </section>

@@ -1,14 +1,15 @@
 class ContestantsController < ApplicationController
   
   def index
-    @contestants = Contestant.all
+    @contestants = Contestant.find_with_reputation(:votes, :all, order: "votes desc")
   end
   
-  def channel
-     respond_to do |format|
-       format.html { render :inline => '<script src="<%=request.protocol%>//connect.facebook.net/en_US/all.js"></script>' }
-     end
-   end
+  #creates URL for custom URL channel file
+  #def channel
+  #   respond_to do |format|
+  #     format.html { render :inline => '<script src="<%=request.protocol%>//connect.facebook.net/en_US/all.js"></script>' }
+  #   end
+  # end
   
   def new
     @contestant = Contestant.new
@@ -43,6 +44,7 @@ class ContestantsController < ApplicationController
   def destroy 
   end
   
+  #method definition for vote feature
   def vote
     value = params[:type] == "up" ? 1 : -1
     @contestant = Contestant.find(params[:id])
