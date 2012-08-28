@@ -5,11 +5,11 @@ class ContestantsController < ApplicationController
   end
   
   #creates URL for custom URL channel file
-  #def channel
-  #   respond_to do |format|
-  #     format.html { render :inline => '<script src="<%=request.protocol%>//connect.facebook.net/en_US/all.js"></script>' }
-  #   end
-  # end
+  def channel
+    respond_to do |format|
+      format.html { render :inline => '<script src="<%=request.protocol%>//connect.facebook.net/en_US/all.js"></script>' }
+    end
+  end
   
   def new
     @contestant = Contestant.new
