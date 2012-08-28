@@ -11,15 +11,17 @@
 
 <%= yield %>
 <script src="http://connect.facebook.net/en_US/all.js"></script>
+<!--
 <script>
   FB.init({
     appId  : '213582692103701',
     status : true, // check login status
     cookie : true, // enable cookies to allow the server to access the session
     xfbml  : true, // parse XFBML
-    channelUrl : '<%= contestants_channel_url %>',  //channel.html file
+    channelUrl : '<%# contestants_channel_url %>',  //channel.html file
     oauth  : true // enable OAuth 2.0
   });
 </script>
+-->
 </body>
 </html>

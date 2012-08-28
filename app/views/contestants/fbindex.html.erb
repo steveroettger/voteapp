@@ -1,0 +1,11 @@
+<h1>Gate#index</h1>
+<p>Find me in app/views/gate/fbindex.html.erb</p>
+
+<%= @signed_request.inspect %>
+
+
+<% if @signed_request["page"]["liked"] %>
+You like me!
+<% else %>
+You suck, cuz you don't like me
+<% end %>
