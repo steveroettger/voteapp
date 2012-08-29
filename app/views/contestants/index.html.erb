@@ -1,5 +1,6 @@
 <section class="contestant-index">
-  <% if @signed_request["page"]["liked"] %>
+  <%- if user_likes_page? -%>
+  <%# if @signed_request["page"]["liked"] %>
     <h1>Vote For Your Favorite Driver</h1>
     <ul>
       <% @contestants.each do |contestant| %>
@@ -12,7 +13,7 @@
 	    </li>
       <% end %>
     </ul>
-  <% else %>
+  <%- else -%>
 	<h1>Like This Page To Vote For Your Favorite Driver</h1>
-  <% end %>
+  <%- end -%>
 </section>
