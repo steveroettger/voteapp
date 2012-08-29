@@ -1,6 +1,6 @@
 FacebookApp::Application.routes.draw do
   
-  root to: 'contestants#fbindex'
+  root to: 'contestants#index'
   #match 'contestants/channel.html' => 'contestants#channel', :as => :contestants_channel
   resources :contestants do
     member { post :vote }
