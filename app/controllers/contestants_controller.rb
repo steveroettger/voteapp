@@ -1,23 +1,8 @@
 class ContestantsController < ApplicationController
   
   def index
-    #app_secret = '025b109fd4a5ff149981f792f118dd57'
-    #@signed_request = FBGraph::Canvas.parse_signed_request(app_secret, params[:signed_request])
     @contestants = Contestant.find_with_reputation(:votes, :all, order: "votes desc")
   end
-  
-  #def fbindex
-  #  app_secret = '025b109fd4a5ff149981f792f118dd57'
-  #  @signed_request = FBGraph::Canvas.parse_signed_request(app_secret, params[:signed_request])
-  #  @contestants = Contestant.find_with_reputation(:votes, :all, order: "votes desc")
-  #end
-    
-  #creates URL for custom URL channel file
-  #def channel
-  #  respond_to do |format|
-  #    format.html { render :inline => '<script src="<%=request.protocol%>//connect.facebook.net/en_US/all.js"></script>' }
-  #  end
-  #end
   
   def new
     @contestant = Contestant.new
