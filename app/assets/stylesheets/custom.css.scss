@@ -8,23 +8,115 @@ body {
 
 @import "bootstrap-responsive";
 
-.contestant-index {
-	ul { 
-		list-style: none; 
+/*-----------INDEX-----------*/
+section#main-container {
+	margin: 0 auto;
+	width: 810px;
+	height: auto;
+	background-color: #333;
+	
+	section#main-header {
+		h1 {
+			color: #fff;
+			position: relative;
+			top: 30px;
+			text-align: center;
+			z-index: 1;
+		}
 		
-		li { 
-			padding-bottom: 20px;
-			
-			a.name { 
-				font-size: 16px; 
-				font-weight: bold;  
-				&:hover { text-decoration: none; }
-			}
+		img {
+			margin:-25px 0 0 10px;
+			width: 790px;
+			height: 350px;
 		}
 	}
 	
-	img {
-		width: 65px;
-		height: 80px;
+	section#main-content {
+		margin-left: 10px;
+		width: 790px;
+		height: 150px;
+		background: #777;
+		
+		p { 
+			position: relative;
+			top: 28px;
+			left: 20px;
+			font-size: 16px;
+			color: #fff; 
+		}
+		
+		h2 {
+			position: relative;
+			top: 35px;
+			left: 40px;
+			padding: 20px;
+			text-align: center;
+			background: #ccc;
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			border-radius: 20px;
+			&:hover { background: #fff; }
+		}
+	}
+	
+	section#giveaway-block {
+		margin-left: 10px;
+		width: 790px;
+		height: 150px;
+		background: #777;
+		border-top: 5px solid #ccc;
+		border-bottom: 5px solid #ccc;
+		
+		h2 { 
+			position: relative;
+			top: 22px;
+			left: 20px;
+			text-align: center;
+			color: #fff;
+		}
+		
+		img {
+			position: relative;
+			margin-top: 5px;
+			left: 80px;
+			width: 300px;
+			height: 140px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+		}
+	}
+	
+	section#footer-content {
+		margin-left: 10px;
+		padding-bottom: 10px;
+		width: 790px;
+		height: 350px;
+		background: #777;
+		
+		.span3 img {
+			width: 100px;
+			height: 100px;
+		}
+		
+		.span7 img {
+			width: 50px;
+			height: 50px;
+			background: #ccc;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			&:hover { background: red; }
+		}
+		
+		div.contestants a { 
+			position: relative;
+			top: 5px;
+			left: 315px;
+			display: inline-block;
+			margin-right: 2px;
+			&:last-child { margin-right: 0px; }
+		}
+		
 	}
 }

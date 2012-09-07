@@ -7,6 +7,8 @@ gem 'rails', '3.2.6'
 
 gem "simple_form", "~> 2.0.2"
 gem "fbgraph", "~> 1.10.0"
+gem 'omniauth-facebook'
+gem 'activeadmin'
 
 # Gems used only for assets and not required
 # in production environments by default.

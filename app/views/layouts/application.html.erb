@@ -4,12 +4,34 @@
   <title>FacebookApp</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <script type="text/javascript">
+	if (window.location.hash == '#_=_')window.location.hash = '';
+  </script>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <div id="fb-root"></div>
-
-<%= yield %>
+<section class="container">
+  <% flash.each do |name, msg| %>
+    <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+	  <a class="close" data-dismiss="alert">×</a><!--/.close-->
+	  <%= msg %>
+    </div><!--/.alert.alert-'name'--> 
+    <% end %>
+	<!--
+	<div id="user_nav" class="pull-right">
+	  <%# if current_user == nil%>
+		  <%# link_to "Sign in with Facebook", "/auth/facebook", 
+			 id: "sign_in", class: "btn btn-primary" %>
+	  <%# else %>
+	      Signed in as <strong><%# current_user.name %></strong>!
+	      <%# link_to "Sign out", signout_path, id: "sign_out" %>
+	    </div>
+	  <%# end %>
+	</div>
+	-->
+	<%= yield %>
+</section>
 <script src="http://connect.facebook.net/en_US/all.js"></script>
 <script>
   FB.init({
