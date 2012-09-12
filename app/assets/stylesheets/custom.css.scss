@@ -17,7 +17,7 @@ $white: #fff;
 section#main-container {
 	margin: 0 auto;
 	width: 810px;
-	height: 950px;
+	height: auto;
 	background-color: #333;
 	
 	section#main-header {
@@ -70,7 +70,7 @@ section#main-container {
 	
 		section#giveaway-block {
 			width: 810px;
-			height: 150px;
+			height: 120px;
 			background: $grayDark;
 			border-bottom: 2px solid #ccc;
 			text-align: center;
@@ -78,7 +78,7 @@ section#main-container {
 			
 			div.span4 {
 				position: relative;
-				top: 30px;
+				top: 15px;
 				left: 30px;
 				h2 { font-size: 28px; }
 				h4 { font-size: 20px; line-height: 25px; }
@@ -89,35 +89,46 @@ section#main-container {
 			margin: 0 auto;
 			padding-bottom: 10px;
 			width: 780px;
-			height: 320px;
-			background: #777;
+			height: 350px;
 		
-			.span3 img {
-				width: 100px;
-				height: 100px;
+			.span4 {
+				float: left;
+				
+				div#profile {
+					margin:20px 0 0 -10px;
+					width: 315px;
+					height: 355px;
+					background: #ccc;
+				}
 			}
 		
-			.span6 img {
+			.span6 {
+				float: right;
+				margin:20px -10px 0 0; 
+				
+				img {
 				width: 50px;
 				height: 50px;
 				background: $red;
-				-webkit-border-radius: 5px;
-				-moz-border-radius: 5px;
-				border-radius: 5px;
 				&:hover { opacity: 0.7; }
+				
+				}
+				
+				div#contestants a { 
+					display: inline-block;
+					margin-right: 2px;
+					&:last-child { margin-right: 0px; }
+				}
+				
+				div#leaderboard {
+					margin:5px 0 0 -10px;
+					width: 452px;
+					height: 300px;
+					background: #ccc;
+				}
 			}
-		
-			div.contestants a { 
-				position: relative;
-				top: 5px;
-				left: 315px;
-				display: inline-block;
-				margin-right: 2px;
-				&:last-child { margin-right: 0px; }
-			}
-		
+			
 			.hidden { display: none; }
-		
 		}
 	}
 	
