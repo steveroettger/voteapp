@@ -3,8 +3,7 @@
 @import "bootstrap";
 
 body { 
-	margin: 0;
-	padding: 0;
+	margin: 0 auto;
 }
 
 /*-----------COLORS-----------*/
@@ -16,14 +15,14 @@ $white: #fff;
 /*-----------INDEX-----------*/
 section#main-container {
 	margin: 0 auto;
-	width: 780px;
+	width: 810px;
 	height: auto;
 	background-color: #333;
 	
 	section#main-header {
 		
 		img {
-			width: 780px;
+			width: 810px;
 			height: 300px;
 		}
 		
@@ -50,7 +49,7 @@ section#main-container {
 	}
 	
 	section.main-content {
-		width: 780px;
+		width: 810px;
 		height: 150px;
 	}	
 	
@@ -69,7 +68,7 @@ section#main-container {
 		}
 	
 		section#giveaway-block {
-			width: 780px;
+			width: 810px;
 			height: 150px;
 			background: $grayDark;
 			border-bottom: 2px solid #ccc;
