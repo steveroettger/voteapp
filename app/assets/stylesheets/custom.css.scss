@@ -5,8 +5,6 @@
 body { 
 	margin: 0 auto;
 	padding: 0;
-	width: 810px;
-	height: 850px;
 }
 
 /*-----------COLORS-----------*/
@@ -19,7 +17,7 @@ $white: #fff;
 section#main-container {
 	margin: 0 auto;
 	width: 810px;
-	height: auto;
+	height: 950px;
 	background-color: #333;
 	
 	section#main-header {
@@ -90,8 +88,8 @@ section#main-container {
 		section#footer-content {
 			margin: 0 auto;
 			padding-bottom: 10px;
-			width: 760px;
-			height: 350px;
+			width: 780px;
+			height: 320px;
 			background: #777;
 		
 			.span3 img {
@@ -106,6 +104,7 @@ section#main-container {
 				-webkit-border-radius: 5px;
 				-moz-border-radius: 5px;
 				border-radius: 5px;
+				&:hover { opacity: 0.7; }
 			}
 		
 			div.contestants a { 
