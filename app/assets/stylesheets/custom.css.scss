@@ -3,7 +3,7 @@
 @import "bootstrap";
 
 body { 
-	overflow: hidden; 
+	overflow-x: hidden; 
 }
 
 @import "bootstrap-responsive";
@@ -86,9 +86,9 @@ section#main-container {
 		}
 	
 		section#footer-content {
-			margin-left: 10px;
+			margin: 0 auto;
 			padding-bottom: 10px;
-			width: 790px;
+			width: 780px;
 			height: 350px;
 			background: #777;
 		
