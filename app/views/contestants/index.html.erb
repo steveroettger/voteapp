@@ -1,69 +1,73 @@
-<%- if user_likes_page? -%>
-	<section id="main-container">
-		<section id="main-header">
-			<h1>Carman Fiat Experience</h1>
-			<%= header_img %>
-		</section>
-		<section id="main-content">
-			<div class="row">
-				<div class="span5">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-					   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+<%# if user_likes_page? %>
+<section id="main-container">
+	<section id="main-header">
+		<%= header_img %>
+		<section id="tabbed-nav">
+			<ul class="tabs">
+				<li class="tab1"><a href="#tab1" data-toggle="tab">CARMAN FIAT EXPERIENCE</a></li>
+				<li class="tab2"><a href="#tab2" data-toggle="tab">WIN FREE FIAT SWAG</a></li>
+				<li class="tab3"><a href="#tab3" data-toggle="tab">GRAB YOUR EXPERIENCE</a></li>
+			</ul><!--/ul.tabs-->
+		</section><!--/section#tabbed-nav-->
+	</section><!--/section#main-header-->
+	
+	<div class="tab-content">
+		<div id="tab1" class="tab-pane active">
+			<section class="main-content teal">
+				<div class="row">
+					<div class="span5">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+					   	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
 					   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
 					   consequat.</p>
-				</div>
-				<div class="span4">
-					<h2>Help Your Friends Win!</h2>
-				</div>
-			</div>
-		</section>
-		<section id="giveaway-block">
-			<div class="row">
-				<div class="span4">
-					<h2>You Could Win Awesome Prizes For Helping Your Friends</h2>
-				</div>
-				<div class="span6">
-					<div id="myCarousel" class="carousel slide">
-					  <!-- Carousel items -->
-					  <div class="carousel-inner">
-					    <div class="active item"><%= swagGear1 %></div>
-					    <div class="item"><%= swagGear2 %></div>
-					    <div class="item"><%= swagGear3 %></div>
-					    <div class="item"><%= swagGear4 %></div>
-					  </div>
-					  <!-- Carousel nav -->
-					  <a class="carousel-control left" href="#myCarousel" 
-						 data-slide="prev">&lsaquo;</a>
-					  <a class="carousel-control right" href="#myCarousel" 
-						 data-slide="next">&rsaquo;</a>	
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="footer-content">
-			<div class="span3">
-				
-			</div>
-			<div class="span7">
-			  <div class="contestants">	
-		      <% @contestants.each do |contestant| %>
-			    <%= link_to image_tag(contestant.image_url), contestant %>
-			    <%# link_to contestant.name, contestant, class: 'name' %>
-			    <%# pluralize contestant.reputation_value_for(:votes).to_i, "vote" %>
-				<%# if current_user && !current_user.voted_for?(contestant) %>
-				  <%# link_to "vote", vote_contestant_path(contestant, type: "up"), 
-					  method: "post", class: "btn btn-primary" %>
-				  <%# end %>
-		      <% end %>
-		      </div>
-			</div>
+					</div><!--/div.span5-->
+				</div><!--/div.row-->
+			</section><!--/section.main-content.teal-->
 			
-		</section>
-<%- else -%>
-	<!--
-	<h1>Like This Page To Vote For Your Favorite Driver</h1>
-	-->
-<%- end -%>
-	</section>
+			<section id="giveaway-block">
+				<div class="row">
+					<div class="span4">
+						<h2>You Could Win</h2>
+						<h4>Awesome Prizes for <br/>Helping Your Friends!</h4>
+					</div><!--/div.span4-->
+					
+				</div><!--/div.row-->
+			</section><!--/section#giveaway-block-->
+			
+			<section id="footer-content">
+				<div class="span3"></div><!--/div.span3-->
+				<div class="span6">
+			  		<div class="contestants">	
+		      			<% @contestants.each do |contestant| %>
+			    			<%= link_to image_tag(contestant.image_url), contestant %>
+			    			<div class="hidden"><%= contestant.id %></div>
+			    			<%# link_to contestant.name, contestant, class: 'name' %>
+			    			<%# pluralize contestant.reputation_value_for(:votes).to_i, "vote" %>
+							<%# if current_user && !current_user.voted_for?(contestant) %>
+				  			<%# link_to "vote", vote_contestant_path(contestant, type: "up"), 
+					  		    method: "post", class: "btn btn-primary" %>
+				  			<%# end %>
+		      			<% end %>
+		      		</div><!--/div.contestants-->
+				</div><!--/div.span6-->
+			</section><!--/section#footer-content-->
+		</div><!--/div#tab1.tab-pane-->
+		
+		<div id="tab2" class="tab-pane">
+			<section class="main-content red">
+				<p>this is the second tab</p>
+			</section><!--/section.main-content.red-->
+		</div><!--/div#tab2.tab-pane-->
+			
+		<div id="tab3" class="tab-pane">
+			<section class="main-content gray">
+				<p>this is the third tab</p>
+			</section><!--/section.main-content.gray-->
+		</div><!--/div#tab3.tab-pane-->
+	</div><!--/div.tab-content-->
+<%# else %>
+	<!--<h1>Like This Page To Vote For Your Favorite Driver</h1>-->
+<%# end %>
+</section>
 
 
