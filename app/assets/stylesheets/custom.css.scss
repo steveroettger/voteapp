@@ -3,10 +3,10 @@
 @import "bootstrap";
 
 body { 
-	overflow-x: hidden; 
+	margin: 0;
+	padding: 0;
 }
 
-@import "bootstrap-responsive";
 /*-----------COLORS-----------*/
 $teal: #007B6C;
 $red: #A2204C;
@@ -16,14 +16,14 @@ $white: #fff;
 /*-----------INDEX-----------*/
 section#main-container {
 	margin: 0 auto;
-	width: 800px;
+	width: 780px;
 	height: auto;
 	background-color: #333;
 	
 	section#main-header {
 		
 		img {
-			width: 800px;
+			width: 780px;
 			height: 300px;
 		}
 		
@@ -50,7 +50,7 @@ section#main-container {
 	}
 	
 	section.main-content {
-		width: 800px;
+		width: 780px;
 		height: 150px;
 	}	
 	
@@ -69,7 +69,7 @@ section#main-container {
 		}
 	
 		section#giveaway-block {
-			width: 800px;
+			width: 780px;
 			height: 150px;
 			background: $grayDark;
 			border-bottom: 2px solid #ccc;
