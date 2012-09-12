@@ -7,23 +7,16 @@
   <script type="text/javascript">
 	if (window.location.hash == '#_=_')window.location.hash = '';
   </script>
+<script type="text/javascript">
+window.fbAsyncInit = function()
+{
+    FB.Canvas.setSize({width:810, height:900});
+}
+</script>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <div id="fb-root"></div>
-<script src="http://connect.facebook.net/en_US/all.js"></script>
-<script>
-window.fbAsyncInit = function () {
-  FB.init({
-    appId  : '213582692103701',
-    status : true, // check login status
-    cookie : true, // enable cookies to allow the server to access the session
-    xfbml  : true, // parse XFBML
-	oauth  : true
-  });
-  FB.Canvas.setSize({ width: 810, height: 900 }); //Resizes the iframe to fit content
-}
-</script>
 <section>
   <% flash.each do |name, msg| %>
     <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
@@ -45,5 +38,14 @@ window.fbAsyncInit = function () {
 	-->
 	<%= yield %>
 </section>
+<script src="http://connect.facebook.net/en_US/all.js"></script>
+<script>
+  FB.init({
+    appId  : '213582692103701',
+    status : true, // check login status
+    cookie : true, // enable cookies to allow the server to access the session
+    xfbml  : true, // parse XFBML
+  });
+</script>
 </body>
 </html>
