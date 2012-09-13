@@ -24,6 +24,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js"></script>
+<script>
+  FB.init({
+    appId  : '213582692103701',
+    status : true, // check login status
+    cookie : true, // enable cookies to allow the server to access the session
+    xfbml  : true, // parse XFBML
+  });
+  FB.Canvas.setAutoGrow();
+</script>
 <section>
   <% flash.each do |name, msg| %>
     <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
@@ -45,16 +56,5 @@
 	-->
 	<%= yield %>
 </section>
-<div id="fb-root"></div>
-<script src="http://connect.facebook.net/en_US/all.js"></script>
-<script>
-  FB.init({
-    appId  : '213582692103701',
-    status : true, // check login status
-    cookie : true, // enable cookies to allow the server to access the session
-    xfbml  : true, // parse XFBML
-  });
-  FB.Canvas.setAutoGrow();
-</script>
 </body>
 </html>
