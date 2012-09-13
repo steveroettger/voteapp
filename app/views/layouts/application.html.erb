@@ -7,16 +7,11 @@
   <script>
   $(document).ready(function() {
 	$('.contestantImage').on('click',function(){
-		alert(this);
 		var url = $(this).attr('href');
 		$('#profile').load(url);
 		return false;
 	});
   	if (window.location.hash == '#_=_')window.location.hash = '';
-	window.fbAsyncInit = function()
-	{
-	    FB.Canvas.setSize(width: 810, height: 900);
-	});
   });
   </script>
   <%= csrf_meta_tags %>
@@ -51,6 +46,11 @@
     status : true, // check login status
     cookie : true, // enable cookies to allow the server to access the session
     xfbml  : true, // parse XFBML
+  });
+
+  FB.Canvas.setSize({ 
+	width: 810, 
+	height: 900
   });
 </script>
 </body>
