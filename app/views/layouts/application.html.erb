@@ -12,15 +12,11 @@
 		return false;
 	});
   	if (window.location.hash == '#_=_')window.location.hash = '';
+    window.fbAsyncInit = function() {
+        FB.Canvas.setSize();
+    });
   });
   </script>
-  <script type="text/javascript">
-        window.fbAsyncInit = function()
-        {
-            FB.Canvas.setSize();
-        }
-    </script>
-
   <%= csrf_meta_tags %>
 </head>
 <body>
