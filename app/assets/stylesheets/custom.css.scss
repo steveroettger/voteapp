@@ -2,17 +2,9 @@
 
 @import "bootstrap";
 
-html { overflow: hidden; }
-
 body { 
-	margin: 0px;
-	overflow: hidden;
-}
-
-section#wrapper {
 	margin: 0;
-	width: 810px;
-	height: 950px;
+	padding: 0;
 }
 
 /*-----------COLORS-----------*/
@@ -25,7 +17,7 @@ $white: #fff;
 section#main-container {
 	margin: 0 auto;
 	width: 810px;
-	height: 920px;
+	height: 950px;
 	background-color: #333;
 	
 	section#main-header {
