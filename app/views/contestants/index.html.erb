@@ -36,14 +36,14 @@
 			
 			<section id="footer-content">
 				<div class="span4">
-					<div id="profile">
-					
-					</div><!--/div#profile-->
+					<div id="profile"></div><!--/div#profile-->
 				</div><!--/div.span4-->
 				<div class="span6">
 					<div id="contestants">	
 		      			<% @contestants.each do |contestant| %>
-			    			<%= link_to image_tag(contestant.image_url), contestant %>
+			    			<%= link_to image_tag(contestant.image_url), contestant, 
+							class: 'contestantImage' %>
+							<!-- <a href="" class="contestantImage" ></a>-->
 			    			<div class="hidden"><%= contestant.id %></div>
 			    			<%# link_to contestant.name, contestant, class: 'name' %>
 			    			<%# pluralize contestant.reputation_value_for(:votes).to_i, "vote" %>
