@@ -12,6 +12,7 @@
 		return false;
 	});
   	if (window.location.hash == '#_=_')window.location.hash = '';
+	window.fbAsyncInit = function() {FB.Canvas.setSize();}
   });
   </script>
   <%= csrf_meta_tags %>
@@ -26,7 +27,7 @@
 	    	cookie : true, // enable cookies to allow the server to access the session
 	    	xfbml  : true, // parse XFBML
 	  	});
-	    FB.Canvas.setAutoGrow();
+	    FB.Canvas.setAutoGrow(7);
 		// Load the SDK Asynchronously
 		  (function(d){
 		     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
