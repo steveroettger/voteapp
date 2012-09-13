@@ -12,15 +12,15 @@
 		return false;
 	});
   	if (window.location.hash == '#_=_')window.location.hash = '';
+	window.fbAsyncInit = function() {FB.Canvas.setSize();}
   });
   </script>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body style='overflow: hidden'>
 	<div id="fb-root"></div>
 	<script src="http://connect.facebook.net/en_US/all.js"></script>
 	<script>
-	  FB.Canvas.setSize({ width: 810, height: 950 });
 	  window.fbAsyncInit = function() {
 	    FB.init({
 	    	appId  : '213582692103701',
@@ -28,7 +28,7 @@
 	    	cookie : true, // enable cookies to allow the server to access the session
 	    	xfbml  : true, // parse XFBML
 	  	});
-	    FB.Canvas.setAutoGrow();
+	    FB.Canvas.setAutoGrow(7);
 	  }
 	</script>
 <section id="wrapper">
