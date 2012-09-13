@@ -15,10 +15,12 @@
   });
   </script>
   <script type="text/javascript">
-        window.fbAsyncInit = function() {
+        window.fbAsyncInit = function()
+        {
             FB.Canvas.setSize();
         }
-  </script>
+    </script>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -52,13 +54,7 @@
     cookie : true, // enable cookies to allow the server to access the session
     xfbml  : true, // parse XFBML
   });
-  /* Init fb Resize window */
-
-    /* Completly removed now in JS SDK*/
-    /* FB.Canvas.setAutoResize(7); */
-
-    /* As of Jan 2012 you need to use */
-    FB.Canvas.setAutoGrow(7);
+  FB.Canvas.setAutoGrow();
 </script>
 </body>
 </html>
