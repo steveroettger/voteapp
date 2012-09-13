@@ -12,9 +12,6 @@
 		return false;
 	});
   	if (window.location.hash == '#_=_')window.location.hash = '';
-    window.fbAsyncInit = function() {
-        FB.Canvas.setSize();
-    });
   });
   </script>
   <%= csrf_meta_tags %>
@@ -30,6 +27,9 @@
     xfbml  : true, // parse XFBML
   });
   FB.Canvas.setAutoGrow();
+  window.fbAsyncInit = function() {
+    FB.Canvas.setSize();
+  }
 </script>
 <section>
   <% flash.each do |name, msg| %>
