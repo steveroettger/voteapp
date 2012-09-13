@@ -12,31 +12,33 @@
 		return false;
 	});
   	if (window.location.hash == '#_=_')window.location.hash = '';
-	window.fbAsyncInit = function() {FB.Canvas.setSize();}
   });
   </script>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div id="fb-root"></div>
-	<script>
-	  window.fbAsyncInit = function() {
-	    FB.init({
-	    	appId  : '213582692103701',
-	    	status : true, // check login status
-	    	cookie : true, // enable cookies to allow the server to access the session
-	    	xfbml  : true, // parse XFBML
-	  	});
-	    FB.Canvas.setAutoGrow(7);
-		// Load the SDK Asynchronously
-		  (function(d){
-		     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-		     js = d.createElement('script'); js.id = id; js.async = true;
-		     js.src = "//connect.facebook.net/en_US/all.js";
-		     d.getElementsByTagName('head')[0].appendChild(js);
-		   }(document));
-	  }
-	</script>
+<div id="fb-root" style="display: none"></div>
+  <script>
+    window.fbAsyncInit = function() {
+	  FB.init({
+	    appId  : '213582692103701',
+	    status : true, // check login status
+	    cookie : true, // enable cookies to allow the server to access the session
+	    xfbml  : true, // parse XFBML
+	  });
+	  // Additional initialization code here
+	  FB.Canvas.setAutoGrow();
+		
+      };
+	  // Load the SDK Asynchronously
+	  (function(d){
+	  	var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+	    if (d.getElementById(id)) {return;}
+	    js = d.createElement('script'); js.id = id; js.async = true;
+	    js.src = "//connect.facebook.net/en_US/all.js";
+	    ref.parentNode.insertBefore(js, ref);
+	  }(document));
+  </script>
 <section id="wrapper">
   <% flash.each do |name, msg| %>
     <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
