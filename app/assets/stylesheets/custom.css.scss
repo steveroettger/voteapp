@@ -17,7 +17,6 @@ $white: #fff;
 section#main-container {
 	margin: 0 auto;
 	width: 810px;
-	height: 950px;
 	background-color: #333;
 	
 	section#main-header {
@@ -51,17 +50,18 @@ section#main-container {
 	
 	section.main-content {
 		width: 810px;
-		height: 150px;
+		height: 175px;
 	}	
 	
 	div#tab1 {	
+	
 		section.main-content.teal {
 			background: $teal;
 			border-bottom: 2px solid #ccc;
 		
 			p { 
 				position: relative;
-				top: 28px;
+				top: 35px;
 				left: 50px;
 				font-size: 16px;
 				color: #fff; 
@@ -70,7 +70,7 @@ section#main-container {
 	
 		section#giveaway-block {
 			width: 810px;
-			height: 120px;
+			height: 150px;
 			background: $grayDark;
 			border-bottom: 2px solid #ccc;
 			text-align: center;
@@ -78,7 +78,7 @@ section#main-container {
 			
 			div.span4 {
 				position: relative;
-				top: 15px;
+				top: 30px;
 				left: 30px;
 				h2 { font-size: 28px; }
 				h4 { font-size: 20px; line-height: 25px; }
@@ -86,10 +86,8 @@ section#main-container {
 		}
 	
 		section#footer-content {
-			margin: 0 auto;
-			padding-bottom: 10px;
 			width: 780px;
-			height: 350px;
+			height: 500px;
 		
 			.span4 {
 				float: left;
