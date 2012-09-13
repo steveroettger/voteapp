@@ -16,7 +16,7 @@
   </script>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body onload="FB.Canvas.setSize({width: 810, height: 950})">
 <div id="fb-root"></div>
 <script src="http://connect.facebook.net/en_US/all.js"></script>
 <script>
@@ -26,12 +26,8 @@
     cookie : true, // enable cookies to allow the server to access the session
     xfbml  : true, // parse XFBML
   });
-  FB.Canvas.setAutoGrow();
-  window.fbAsyncInit = function() {
-    FB.Canvas.setSize();
-  }
 </script>
-<section>
+<section id="wrapper">
   <% flash.each do |name, msg| %>
     <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
 	  <a class="close" data-dismiss="alert">×</a><!--/.close-->
