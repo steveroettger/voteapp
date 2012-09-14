@@ -1,10 +1,19 @@
+<script>
+$(document).ready(function() {
+	$('.contestantImage').on('click',function(){
+		var url = $(this).attr('href');
+		$('#profile').load(url);
+		return false;
+	});
+});
+</script>
 <%# if user_likes_page? %>
 <section id="main-container">
 	<section id="main-header">
 		<%= header_img %>
 		<section id="tabbed-nav">
 			<ul class="tabs">
-				<li class="tab1"><a href="#tab1" data-toggle="tab">CARMAN FIAT EXPERIENCE</a></li>
+				<li class="tab1 active"><a href="#tab1" data-toggle="tab">CARMAN FIAT EXPERIENCE</a></li>
 				<li class="tab2"><a href="#tab2" data-toggle="tab">WIN FREE FIAT SWAG</a></li>
 				<li class="tab3"><a href="#tab3" data-toggle="tab">GRAB YOUR EXPERIENCE</a></li>
 			</ul><!--/ul.tabs-->
@@ -35,28 +44,29 @@
 			</section><!--/section#giveaway-block-->
 			
 			<section id="footer-content">
-				<div class="span4">
-					<div id="profile"></div><!--/div#profile-->
-				</div><!--/div.span4-->
-				<div class="span6">
-					<div id="contestants">	
-		      			<% @contestants.each do |contestant| %>
-			    			<%= link_to image_tag(contestant.image_url), contestant, 
-							class: 'contestantImage' %>
-							<!-- <a href="" class="contestantImage" ></a>-->
-			    			<div class="hidden"><%= contestant.id %></div>
-			    			<%# link_to contestant.name, contestant, class: 'name' %>
-			    			<%# pluralize contestant.reputation_value_for(:votes).to_i, "vote" %>
-							<%# if current_user && !current_user.voted_for?(contestant) %>
-				  			<%# link_to "vote", vote_contestant_path(contestant, type: "up"), 
-					  		    method: "post", class: "btn btn-primary" %>
-				  			<%# end %>
-		      			<% end %>
-		      		</div><!--/div#contestants-->
-					<div id="leaderboard">
+				<section class="tabbable">
+					<ul class="nav nav-tabs">
+						<li><h2>2012 Fiat Experience Standings</h2></li>
+					</ul><!--/ul.tabs-->
 					
-					</div><!--/div#leaderboard-->
-				</div><!--/div.span6-->
+					<div class="span6">
+						<div id="contestants">
+							<% @contestants.each do |contestant| %>
+								<%= link_to image_tag(contestant.image_url), contestant, class: 'contestantImage' %>
+							<% end %>
+						</div>
+					</div>
+					
+					<div class="tab-content">
+						<div id="tab4" class="tab-pane active">
+							<section class="footer-main">
+								<div id="profile">
+									
+								</div><!--/div#profile-->
+							</section><!--/section.footer-main-->
+						</div><!--/div#tab4-->
+					</div><!--/div.tab-content-->
+				</section><!--/section.tabbable-->
 			</section><!--/section#footer-content-->
 		</div><!--/div#tab1.tab-pane-->
 		

@@ -45,6 +45,7 @@ section#main-container {
 			li.tab1 { background: $teal; }
 			li.tab2 { background: $red; }
 			li.tab3 { background: $grayDark; }
+			li.active a { text-decoration: underline; }
 		}
 	}
 	
@@ -56,7 +57,19 @@ section#main-container {
 	div#tab1 {	
 	
 		section.main-content.teal {
-			background: $teal;
+			/* IE10 Consumer Preview */ 
+			background-image: -ms-linear-gradient(right, #38B09E 0%, #073029 100%);
+			/* Mozilla Firefox */ 
+			background-image: -moz-linear-gradient(right, #38B09E 0%, #073029 100%);
+			/* Opera */ 
+			background-image: -o-linear-gradient(right, #38B09E 0%, #073029 100%);
+			/* Webkit (Safari/Chrome 10) */ 
+			background-image: -webkit-gradient(linear, right top, left top, 
+							  color-stop(0, #38B09E), color-stop(1, #073029));
+			/* Webkit (Chrome 11+) */ 
+			background-image: -webkit-linear-gradient(right, #38B09E 0%, #073029 100%);
+			/* W3C Markup, IE10 Release Preview */ 
+			background-image: linear-gradient(to left, #38B09E 0%, #073029 100%);
 			border-bottom: 2px solid #ccc;
 		
 			p { 
@@ -86,43 +99,81 @@ section#main-container {
 		}
 	
 		section#footer-content {
-			width: 780px;
-			height: 500px;
-		
-			.span4 {
-				float: left;
+			width: 810px;
+			height: 540px;
+			/* IE10 Consumer Preview */ 
+			background-image: -ms-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
+			/* Mozilla Firefox */ 
+			background-image: -moz-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
+			/* Opera */ 
+			background-image: -o-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
+			/* Webkit (Safari/Chrome 10) */ 
+			background-image: -webkit-gradient(linear, left bottom, left top, 
+							  color-stop(0, #6C6F65), color-stop(1, #333631));
+			/* Webkit (Chrome 11+) */ 
+			background-image: -webkit-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
+			/* W3C Markup, IE10 Release Preview */ 
+			background-image: linear-gradient(to top, #6C6F65 0%, #333631 100%);
+			
+			section.tabbable {
+				width: 770px;
+				margin:20px 0 0 20px;
+				-webkit-box-shadow: -2px 4px 14px rgba(50, 50, 50, 0.75);
+				-moz-box-shadow:    -2px 4px 14px rgba(50, 50, 50, 0.75);
+				box-shadow:         -2px 4px 14px rgba(50, 50, 50, 0.75);
 				
-				div#profile {
-					margin:20px 0 0 -10px;
-					width: 315px;
-					height: 355px;
-					background: #ccc;
+				ul.nav.nav-tabs {
+					margin-bottom: 0;
+					border: none;
+					li { 
+						padding:15px 10px 15px 10px;
+						background: #BBBDB2; 
+						h2 { 
+							font-size: 18px;
+							color: $red; 
+						} 
+					}
+				}
+				
+				div#tab4 {
+					section.footer-main {
+						width: 770px;
+						height: 400px;
+						background: #BBBDB2;
+
+					}
 				}
 			}
 		
-			.span6 {
-				float: right;
-				margin:20px -10px 0 0; 
+			.span6 { 
+				position: absolute;
+				top: 652px;
+				left: 480px;
 				
 				img {
-				width: 50px;
-				height: 50px;
-				background: $red;
+				width: 53px;
+				height: 53px;
+				/* IE10 Consumer Preview */ 
+				background-image: -ms-radial-gradient(center, circle farthest-corner, #B51452 0%, #740030 100%);
+				/* Mozilla Firefox */ 
+				background-image: -moz-radial-gradient(center, circle farthest-corner, #B51452 0%, #740030 100%);
+				/* Opera */ 
+				background-image: -o-radial-gradient(center, circle farthest-corner, #B51452 0%, #740030 100%);
+				/* Webkit (Safari/Chrome 10) */ 
+				background-image: -webkit-gradient(radial, center center, 0, center center, 497, 
+								  color-stop(0, #B51452), color-stop(1, #740030));
+				/* Webkit (Chrome 11+) */ 
+				background-image: -webkit-radial-gradient(center, circle farthest-corner, #B51452 0%, #740030 100%);
+				/* W3C Markup, IE10 Release Preview */ 
+				background-image: radial-gradient(circle farthest-corner at center, #B51452 0%, #740030 100%);
 				&:hover { opacity: 0.7; }
 				
 				}
 				
 				div#contestants a { 
 					display: inline-block;
-					margin-right: 2px;
+					margin-right: 1px;
 					&:last-child { margin-right: 0px; }
-				}
-				
-				div#leaderboard {
-					margin:5px 0 0 -10px;
-					width: 452px;
-					height: 300px;
-					background: #ccc;
 				}
 			}
 			
