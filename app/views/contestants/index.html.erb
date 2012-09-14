@@ -61,14 +61,32 @@ $(document).ready(function() {
 						<div id="tab4" class="tab-pane active">
 							<section class="footer-main">
 								<div id="profile">
-									
+									<section class="profile-container">
+										<%= image_tag(@contestant.image_url, class: 'contestant-profile') %>
+										<h1><%= @contestant.name %></h1>
+										<p>Age:&nbsp;<%= @contestant.age %></p>
+										<p>Vocation:&nbsp;<%= @contestant.vocation %></p>
+										<p><strong>Current Vote Talley:&nbsp;</strong></p>
+										<hr class="profile">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et 
+										   dolore magna aliqua. </p>
+										<ul>
+											<li><%= link_to facebook_icon, @contestant.fb_link, target: '_blank' %></li>
+											<li><%= link_to twitter_icon, @contestant.twitter_link, target: '_blank' %></li>
+											<li><%= link_to linkedin_icon, '#', target: '_blank' %></li>
+											<li><%= link_to foursquare_icon, '#', target: '_blank' %></li>
+											<li><%= link_to instagram_icon, '#', target: '_blank' %></li>
+										</ul>
+									</section><!--/section.profile-container-->
 								</div><!--/div#profile-->
 							</section><!--/section.footer-main-->
 						</div><!--/div#tab4-->
 					</div><!--/div.tab-content-->
 				</section><!--/section.tabbable-->
 				
-				<section id="termsLink"></section>
+				<section id="termsLink">
+					<%= link_to 'Carman Fiat Experience Promotion Rules & Responsibilities', '#', target: '_blank' %>
+				</section>
 			</section><!--/section#footer-content-->
 		</div><!--/div#tab1.tab-pane-->
 		

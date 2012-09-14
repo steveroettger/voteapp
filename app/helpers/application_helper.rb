@@ -1,23 +1,28 @@
 module ApplicationHelper
-  
+  # Main image used in the header
   def header_img
     image_tag('header-img.jpeg', border: 0)
   end
   
-  def swagGear1
-    image_tag('swag-first.jpeg', border: 0)
+  # Icons for contestant profile section
+  def facebook_icon
+    image_tag('facebook.png', border: 0)
   end
   
-  def swagGear2
-    image_tag('swag-second.jpeg', border: 0)
+  def twitter_icon
+    image_tag('twitter.png', border: 0)
   end
   
-  def swagGear3
-    image_tag('swag-third.jpeg', border: 0)
+  def linkedin_icon
+    image_tag('linkedin.png', border: 0)
   end
   
-  def swagGear4
-    image_tag('swag-fourth.jpeg', border: 0)
+  def foursquare_icon
+    image_tag('foursquare.png', border: 0)
+  end
+  
+  def instagram_icon
+    image_tag('instagram.png', border: 0)
   end
 
 end
