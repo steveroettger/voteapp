@@ -1,6 +1,7 @@
 // Override Bootstrap Styles
 
 @import "bootstrap";
+@import "jquery.ui.slider";
 
 body { 
 	margin: 0;
@@ -17,9 +18,49 @@ $white: #fff;
 section#main-container {
 	margin: 0 auto;
 	width: 810px;
-	background-color: #333;
+	background: #333;
+	
+	section#countdown {
+		position: relative;
+		left: 520px; 
+		width: 250px;
+		height: 105px;
+		color: #fff;
+		background: rgba(0,0,0,.6);
+		z-index: 999;
+		
+		hr.divider {
+		margin:0 auto;
+		position: relative;
+		top: 39px;
+		width: 206px; 
+		height: 2px;  
+		color: rgba(0,0,0,.6);
+		background-color: rgba(0,0,0,.6); 
+		border: none;
+		} 
+		
+		h1 { 
+			margin: 0; 
+			padding: 0; 
+			font-size: 14px; 
+			text-align: center; 
+			color: $white;
+		}
+		
+		table.table {
+			margin:-10px auto;
+			width: 180px;
+			border: none; 
+			
+			td { padding:2px 5px; line-height: 20px; border: none; &:hover {  }  }
+			th span.desc { font-weight: lighter; text-align: left; }
+			td span.digit { padding:2px 10px; background: #6C6F65; font-weight: bolder; font-size: 32px; }
+		}
+	}
 	
 	section#main-header {
+		margin-top: -105px;
 		
 		img {
 			width: 810px;
@@ -52,26 +93,21 @@ section#main-container {
 	section.main-content {
 		width: 810px;
 		height: 175px;
+		
 	}	
 	
 	div#tab1 {	
 	
 		section.main-content.teal {
-			/* IE10 Consumer Preview */ 
 			background-image: -ms-linear-gradient(right, #38B09E 0%, #073029 100%);
-			/* Mozilla Firefox */ 
 			background-image: -moz-linear-gradient(right, #38B09E 0%, #073029 100%);
-			/* Opera */ 
 			background-image: -o-linear-gradient(right, #38B09E 0%, #073029 100%);
-			/* Webkit (Safari/Chrome 10) */ 
 			background-image: -webkit-gradient(linear, right top, left top, 
 							  color-stop(0, #38B09E), color-stop(1, #073029));
-			/* Webkit (Chrome 11+) */ 
 			background-image: -webkit-linear-gradient(right, #38B09E 0%, #073029 100%);
-			/* W3C Markup, IE10 Release Preview */ 
 			background-image: linear-gradient(to left, #38B09E 0%, #073029 100%);
-			border-bottom: 2px solid #ccc;
-		
+			border-bottom: 5px solid #009246;
+			
 			p { 
 				position: relative;
 				top: 35px;
@@ -84,7 +120,8 @@ section#main-container {
 		section#giveaway-block {
 			width: 810px;
 			height: 150px;
-			background: $grayDark;
+			background: #171816;
+			border-top: 5px solid #CE2B37;
 			border-bottom: 2px solid #ccc;
 			text-align: center;
 			color: $white;
@@ -100,24 +137,44 @@ section#main-container {
 	
 		section#footer-content {
 			width: 810px;
-			height: 570px;
-			/* IE10 Consumer Preview */ 
+			height: 590px;
 			background-image: -ms-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
-			/* Mozilla Firefox */ 
 			background-image: -moz-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
-			/* Opera */ 
 			background-image: -o-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
-			/* Webkit (Safari/Chrome 10) */ 
 			background-image: -webkit-gradient(linear, left bottom, left top, 
 							  color-stop(0, #6C6F65), color-stop(1, #333631));
-			/* Webkit (Chrome 11+) */ 
 			background-image: -webkit-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
-			/* W3C Markup, IE10 Release Preview */ 
 			background-image: linear-gradient(to top, #6C6F65 0%, #333631 100%);
+			
+			div#contestants { 
+				float: right;
+				margin:20px 20px 0 0;
+				
+				img {
+					width: 55px;
+					height: 60px;
+					background-image: -ms-radial-gradient(center, circle farthest-corner, #B51452 0%, #740030 100%);
+					background-image: -moz-radial-gradient(center, circle farthest-corner, #B51452 0%, #740030 100%);
+					background-image: -o-radial-gradient(center, circle farthest-corner, #B51452 0%, #740030 100%);
+					background-image: -webkit-gradient(radial, center center, 0, center center, 497, 
+								  	  color-stop(0, #B51452), color-stop(1, #740030));
+					background-image: -webkit-radial-gradient(center, 
+									  circle farthest-corner, #B51452 0%, #740030 100%);
+					background-image: radial-gradient(circle farthest-corner at center, #B51452 0%, #740030 100%);
+					&:hover { opacity: 0.7; }
+				}
+				
+			 	a { 
+					display: inline-block;
+					margin-right: 1px;
+					&:last-child { margin-right: 0px; }
+				}
+			}
 			
 			section.tabbable {
 				width: 770px;
-				margin:20px 0 0 20px;
+				padding-top: 20px;
+				margin:0px 0 0 20px;
 				-webkit-box-shadow: -2px 4px 14px rgba(50, 50, 50, 0.75);
 				-moz-box-shadow:    -2px 4px 14px rgba(50, 50, 50, 0.75);
 				box-shadow:         -2px 4px 14px rgba(50, 50, 50, 0.75);
@@ -131,6 +188,7 @@ section#main-container {
 						h2 { 
 							font-size: 18px;
 							color: $red; 
+							text-shadow:1px 1px 1px #333;
 						} 
 					}
 				}
@@ -148,40 +206,54 @@ section#main-container {
 							height: 430px;
 							background: #93968A;
 						}
+						
+						div#leaderboard {
+							float: right;
+							width: 475px;
+							height: 440px;
+								
+							div.tracks {
+								display: inline-block;
+								margin-left: 21px;
+								width: 35px;
+								height: 390px;
+								background: #93968A;
+								&:first-child { margin-left: 10px; }
+								
+								div.tracks-inner {
+									margin-left: 10px;
+									width: 15px;
+									height: 390px;
+									background: #6C6F65;
+								}
+								
+								div.vote-btn  {
+									margin:-8px 0 0 -5px;
+									width: 45px;
+									height: 45px;
+									box-shadow:1px 1px 3px #000;
+									-webkit-border-radius: 25px;
+									-moz-border-radius: 25px;
+									border-radius: 25px;
+									background-image: -ms-radial-gradient(center, circle farthest-corner, 
+													  #B51452 0%, #740030 100%);
+									background-image: -moz-radial-gradient(center, circle farthest-corner, 
+													  #B51452 0%, #740030 100%);
+									background-image: -o-radial-gradient(center, circle farthest-corner, 
+													  #B51452 0%, #740030 100%);
+									background-image: -webkit-gradient(radial, center center, 0, center center, 497, 
+												  	  color-stop(0, #B51452), color-stop(1, #740030));
+									background-image: -webkit-radial-gradient(center, 
+													  circle farthest-corner, #B51452 0%, #740030 100%);
+									background-image: radial-gradient(circle farthest-corner at center, 
+													  #B51452 0%, #740030 100%);
+									&:hover { box-shadow:0 0 4px #222 inset; }
+								}
+								
+							}
+						}
 
 					}
-				}
-			}
-		
-			.span6 { 
-				position: absolute;
-				top: 652px;
-				left: 480px;
-				
-				img {
-				width: 53px;
-				height: 53px;
-				/* IE10 Consumer Preview */ 
-				background-image: -ms-radial-gradient(center, circle farthest-corner, #B51452 0%, #740030 100%);
-				/* Mozilla Firefox */ 
-				background-image: -moz-radial-gradient(center, circle farthest-corner, #B51452 0%, #740030 100%);
-				/* Opera */ 
-				background-image: -o-radial-gradient(center, circle farthest-corner, #B51452 0%, #740030 100%);
-				/* Webkit (Safari/Chrome 10) */ 
-				background-image: -webkit-gradient(radial, center center, 0, center center, 497, 
-								  color-stop(0, #B51452), color-stop(1, #740030));
-				/* Webkit (Chrome 11+) */ 
-				background-image: -webkit-radial-gradient(center, circle farthest-corner, #B51452 0%, #740030 100%);
-				/* W3C Markup, IE10 Release Preview */ 
-				background-image: radial-gradient(circle farthest-corner at center, #B51452 0%, #740030 100%);
-				&:hover { opacity: 0.7; }
-				
-				}
-				
-				div#contestants a { 
-					display: inline-block;
-					margin-right: 1px;
-					&:last-child { margin-right: 0px; }
 				}
 			}
 			
@@ -195,14 +267,13 @@ section#main-container {
 				&:hover { text-decoration: underline; }
 			}
 			
-			.hidden { display: none; }
 		}
 	}
 	
 	div#tab2 {
 		section.main-content.red {
 			background: $red;
-			border-bottom: 2px solid #ccc;
+			border-bottom: 5px solid #009246;
 			
 			p { color: $white; }
 		}
@@ -211,7 +282,7 @@ section#main-container {
 	div#tab3 {
 		section.main-content.gray {
 			background: $grayDark;
-			border-bottom: 2px solid #ccc;
+			border-bottom: 5px solid #009246;
 			
 			p { color: $white; }
 		}
@@ -222,7 +293,6 @@ section#main-container {
 section#main-profile {
 	width: 270px;
 	height: 430px;
-	background: #93968A;
 }
 
 section.profile-container {
@@ -230,8 +300,10 @@ section.profile-container {
 	margin-left: 10px; 
 	
 	img.contestant-profile { 
+		margin-top: 10px;
 		width: 250px; 
 		height: 145px;
+		background: #171816;
 	}
 	
 	h1 { font-size: 18px; }
@@ -253,4 +325,14 @@ section.profile-container {
 			&:hover { opacity: .80; }
 		}
 	}
+}
+
+/*-----------MISC-----------*/
+hr.white { 
+	margin:0;
+	width: 810px; 
+	height: 5px; 
+	color: $white; 
+	background-color: $white; 
+	border: none; 
 }

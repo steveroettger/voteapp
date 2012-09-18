@@ -5,10 +5,35 @@ $(document).ready(function() {
 		$('#profile').load(url);
 		return false;
 	});
+	
+	$('#countdown').countdown({ date: '01 January 2013 12:00:00'}, function() {
+		$('#countdown').text('Campaign is over.')
+	});
 });
 </script>
 <%# if user_likes_page? %>
 <section id="main-container">
+	<section id="countdown">
+		<h1>FIAT EXPERIENCE COUNTDOWN</h1>
+		<hr class="divider">
+		<table class="table">
+			<thead>
+				<tr>
+					<th><span class="desc">Days</span></th>
+					<th><span class="desc">Hours</span></th>
+					<th><span class="desc">Minutes</span></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><span class="days digit">00</span></td>
+					<td><span class="hours digit">00</span></td>
+					<td><span class="mins digit">00</span></td>
+				</tr>
+			</tbody>
+		</table><!--/table.table-->
+	</section><!--/section#countdown-->
+	
 	<section id="main-header">
 		<%= header_img %>
 		<section id="tabbed-nav">
@@ -32,7 +57,7 @@ $(document).ready(function() {
 					</div><!--/div.span5-->
 				</div><!--/div.row-->
 			</section><!--/section.main-content.teal-->
-			
+			<hr class="white">
 			<section id="giveaway-block">
 				<div class="row">
 					<div class="span4">
@@ -44,19 +69,17 @@ $(document).ready(function() {
 			</section><!--/section#giveaway-block-->
 			
 			<section id="footer-content">
+				<div id="contestants">
+					<% @contestants.each do |contestant| %>
+						<%= link_to image_tag(contestant.image_url), contestant, class: 'contestantImage' %>
+					<% end %>
+				</div>
+				
 				<section class="tabbable">
 					<ul class="nav nav-tabs">
 						<li><h2>2012 Fiat Experience Standings</h2></li>
 					</ul><!--/ul.tabs-->
-					
-					<div class="span6">
-						<div id="contestants">
-							<% @contestants.each do |contestant| %>
-								<%= link_to image_tag(contestant.image_url), contestant, class: 'contestantImage' %>
-							<% end %>
-						</div>
-					</div>
-					
+				
 					<div class="tab-content">
 						<div id="tab4" class="tab-pane active">
 							<section class="footer-main">
@@ -68,17 +91,30 @@ $(document).ready(function() {
 										<p>Vocation:&nbsp;<%= @contestant.vocation %></p>
 										<p><strong>Current Vote Talley:&nbsp;</strong></p>
 										<hr class="profile">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et 
-										   dolore magna aliqua. </p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 	
+										   tempor incididunt ut labore et dolore magna aliqua. </p>
 										<ul>
-											<li><%= link_to facebook_icon, @contestant.fb_link, target: '_blank' %></li>
-											<li><%= link_to twitter_icon, @contestant.twitter_link, target: '_blank' %></li>
+											<li><%= link_to facebook_icon, @contestant.fb_link, 
+													target: '_blank' %></li>
+											<li><%= link_to twitter_icon, @contestant.twitter_link, 
+													target: '_blank' %></li>
 											<li><%= link_to linkedin_icon, '#', target: '_blank' %></li>
 											<li><%= link_to foursquare_icon, '#', target: '_blank' %></li>
 											<li><%= link_to instagram_icon, '#', target: '_blank' %></li>
 										</ul>
 									</section><!--/section.profile-container-->
 								</div><!--/div#profile-->
+								
+								<div id="leaderboard">
+									<% @contestants.each do |contestant| %>
+										<div class="tracks">
+											<div class="tracks-inner"></div>
+											<div class="vote-btn"></div>
+										</div>
+									<% end %>
+								</div><!--/div#leaderboard-->
+								
+								
 							</section><!--/section.footer-main-->
 						</div><!--/div#tab4-->
 					</div><!--/div.tab-content-->
@@ -94,12 +130,14 @@ $(document).ready(function() {
 			<section class="main-content red">
 				<p>this is the second tab</p>
 			</section><!--/section.main-content.red-->
+			<hr class="white">
 		</div><!--/div#tab2.tab-pane-->
 			
 		<div id="tab3" class="tab-pane">
 			<section class="main-content gray">
 				<p>this is the third tab</p>
 			</section><!--/section.main-content.gray-->
+			<hr class="white">
 		</div><!--/div#tab3.tab-pane-->
 	</div><!--/div.tab-content-->
 <%# else %>
@@ -108,3 +146,26 @@ $(document).ready(function() {
 </section>
 
 
+
+
+
+
+	
+
+<!-- CODE FOR THE VOTE FEATURES -->
+<!--
+<div class="span6">	
+	<div id="contestants">	
+		<%# @contestants.each do |contestant| %>
+			<%# link_to image_tag(contestant.image_url), contestant, 
+				class: 'contestantImage' %>
+			<%# link_to contestant.name, contestant, class: 'name' %>
+			<%# pluralize contestant.reputation_value_for(:votes).to_i, "vote" %>
+			<%# if current_user && !current_user.voted_for?(contestant) %>
+				<%# link_to "vote", vote_contestant_path(contestant, type: "up"), 
+			    	method: "post", class: "btn btn-primary" %>
+			<%# end %>
+		<%# end %>
+	</div>
+</div>
+-->

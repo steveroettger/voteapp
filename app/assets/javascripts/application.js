@@ -12,5 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require countdown
 //= require twitter/bootstrap
 //= require_tree .
+
+
+
+

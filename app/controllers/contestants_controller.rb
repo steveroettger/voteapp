@@ -1,4 +1,5 @@
 class ContestantsController < ApplicationController
+  before_filter :authenticate_admin_user!, only: [:new, :create, :edit, :update, :destroy]
   
   def index
     #@contestants = Contestant.find_with_reputation(:votes, :all, order: "votes desc")
