@@ -4,7 +4,7 @@ class ContestantsController < ApplicationController
   def index
     #@contestants = Contestant.find_with_reputation(:votes, :all, order: "votes desc")
     @contestants = Contestant.all
-    #@contestant = Contestant.find(1)
+    @contestant = Contestant.find(1)
   end
   
   def new
@@ -42,10 +42,12 @@ class ContestantsController < ApplicationController
   
   #method definition for vote feature
   def vote
-    value = params[:type] == "up" ? 1 : 0
-    @contestant = Contestant.find(params[:id])
-    @contestant.add_or_update_evaluation(:votes, value, current_user)
-    redirect_to :back, notice: "Thank you for voting"
+    vote = current_user.contestant_votes.new(value: params[:value], contestant_id: params[:id])
+    if vote.save
+      redirect_to :back
+    else
+      redirect_to :back, alert: "Unable to vote, perhaps you already did."
+    end
   end
   
 end

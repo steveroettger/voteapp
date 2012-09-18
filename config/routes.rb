@@ -8,6 +8,7 @@ FacebookApp::Application.routes.draw do
   resources :contestants do
     member { post :vote }
   end
+  resources :test_drivers
   match 'auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'

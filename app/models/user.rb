@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :evaluations, class_name: "RSEvaluation", as: :source
+  has_many :contestant_votes
   
   def self.from_omniauth(auth)
       where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
       end
   end
   
-  def voted_for?(contestant)
-    evaluations.where(target_type: contestant.class, target_id: contestant.id).present?
-  end
+  def can_vote_for?(contestant)
+      contestant_votes.build(value: 1, contestant: contestant).valid?
+    end
 end

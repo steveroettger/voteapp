@@ -3,9 +3,9 @@ ActiveAdmin.register Contestant do
     index do
       column :id
       column :name
+      column :age
+      column :vocation
       column :image_url
-      column :created_at
-      column :updated_at
       
       default_actions
     end

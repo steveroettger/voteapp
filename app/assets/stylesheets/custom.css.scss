@@ -10,22 +10,27 @@ body {
 
 /*-----------COLORS-----------*/
 $teal: #007B6C;
-$red: #A2204C;
+$pink: #740030;
 $grayDark: #333;
 $white: #fff;
 
 /*-----------INDEX-----------*/
+section#wrapper {
+	margin: 0 auto;
+	width: 810px;
+}
+
 section#main-container {
 	margin: 0 auto;
 	width: 810px;
-	background: #333;
+	background: $grayDark;
 	
 	section#countdown {
 		position: relative;
 		left: 520px; 
 		width: 250px;
 		height: 105px;
-		color: #fff;
+		color: $white;
 		background: rgba(0,0,0,.6);
 		z-index: 999;
 		
@@ -53,6 +58,7 @@ section#main-container {
 			width: 180px;
 			border: none; 
 			
+			tr:hover td, tr:hover th { background: none; }
 			td { padding:2px 5px; line-height: 20px; border: none; &:hover {  }  }
 			th span.desc { font-weight: lighter; text-align: left; }
 			td span.digit { padding:2px 10px; background: #6C6F65; font-weight: bolder; font-size: 32px; }
@@ -84,21 +90,17 @@ section#main-container {
 			}
 			
 			li.tab1 { background: $teal; }
-			li.tab2 { background: $red; }
+			li.tab2 { background: $pink; }
 			li.tab3 { background: $grayDark; }
 			li.active a { text-decoration: underline; }
 		}
 	}
 	
-	section.main-content {
-		width: 810px;
-		height: 175px;
-		
-	}	
-	
 	div#tab1 {	
 	
-		section.main-content.teal {
+		section#main-content-teal {
+			width: 810px;
+			height: 175px;
 			background-image: -ms-linear-gradient(right, #38B09E 0%, #073029 100%);
 			background-image: -moz-linear-gradient(right, #38B09E 0%, #073029 100%);
 			background-image: -o-linear-gradient(right, #38B09E 0%, #073029 100%);
@@ -216,14 +218,14 @@ section#main-container {
 								display: inline-block;
 								margin-left: 21px;
 								width: 35px;
-								height: 390px;
+								height: 400px;
 								background: #93968A;
 								&:first-child { margin-left: 10px; }
 								
 								div.tracks-inner {
 									margin-left: 10px;
 									width: 15px;
-									height: 390px;
+									height: 400px;
 									background: #6C6F65;
 								}
 								
@@ -231,7 +233,7 @@ section#main-container {
 									margin:-8px 0 0 -5px;
 									width: 45px;
 									height: 45px;
-									box-shadow:1px 1px 3px #000;
+									box-shadow:1px 1px 3px #6C6F65;
 									-webkit-border-radius: 25px;
 									-moz-border-radius: 25px;
 									border-radius: 25px;
@@ -248,6 +250,16 @@ section#main-container {
 									background-image: radial-gradient(circle farthest-corner at center, 
 													  #B51452 0%, #740030 100%);
 									&:hover { box-shadow:0 0 4px #222 inset; }
+									
+									a, a:visited { 
+										position: relative; 
+										top: 12px; 
+										left: 9px; 
+										text-align: center; 
+										color: $white; 
+										font-size: 14px;
+										&:hover { text-decoration: none; color: $white; }
+									}
 								}
 								
 							}
@@ -257,12 +269,12 @@ section#main-container {
 				}
 			}
 			
-			section#termsLink { 
+			section.termsLink { 
 				margin-top:20px;
 				text-align: center; 
 			}
 			
-			section#termsLink a, section#termsLink a:visited {  
+			section.termsLink a, section.termsLink a:visited {  
 				color: $white;
 				&:hover { text-decoration: underline; }
 			}
@@ -271,20 +283,29 @@ section#main-container {
 	}
 	
 	div#tab2 {
-		section.main-content.red {
-			background: $red;
-			border-bottom: 5px solid #009246;
-			
-			p { color: $white; }
+		section#main-content-pink {
+			width: 810px;
+			height: 400px; 
+			background-image: -ms-linear-gradient(bottom, #B51452 0%, #740030 100%);
+			background-image: -moz-linear-gradient(bottom, #B51452 0%, #740030 100%);
+			background-image: -o-linear-gradient(bottom, #B51452 0%, #740030 100%);
+			background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #B51452), color-stop(1, #740030));
+			background-image: -webkit-linear-gradient(bottom, #B51452 0%, #740030 100%);
+			background-image: linear-gradient(to top, #B51452 0%, #740030 100%);
 		}
 	}
 	
 	div#tab3 {
-		section.main-content.gray {
-			background: $grayDark;
-			border-bottom: 5px solid #009246;
-			
-			p { color: $white; }
+		section#main-content-gray {
+			width: 810px;
+			height: 400px;
+			background-image: -ms-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
+			background-image: -moz-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
+			background-image: -o-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
+			background-image: -webkit-gradient(linear, left bottom, left top, 
+							  color-stop(0, #6C6F65), color-stop(1, #333631));
+			background-image: -webkit-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
+			background-image: linear-gradient(to top, #6C6F65 0%, #333631 100%);
 		}
 	}
 }
