@@ -3,9 +3,10 @@
 @import "bootstrap";
 @import "jquery.ui.slider";
 
-body { 
+html, body { 
 	margin: 0;
 	padding: 0;
+	border: 0;
 }
 
 /*-----------COLORS-----------*/
@@ -15,13 +16,7 @@ $grayDark: #333;
 $white: #fff;
 
 /*-----------INDEX-----------*/
-section#wrapper {
-	margin: 0 auto;
-	width: 810px;
-}
-
 section#main-container {
-	margin: 0 auto;
 	width: 810px;
 	background: $grayDark;
 	
@@ -305,7 +300,19 @@ section#main-container {
 			background-image: -webkit-gradient(linear, left bottom, left top, 
 							  color-stop(0, #6C6F65), color-stop(1, #333631));
 			background-image: -webkit-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
-			background-image: linear-gradient(to top, #6C6F65 0%, #333631 100%);
+			background-image: linear-gradient(to top, #6C6F65 0%, #333631 100%);	
+			
+			iframe#form {
+			    width: 540px;
+			    height: 294px;
+			    margin:20px auto;
+			    padding: 0px;
+			    border: 0px;
+			    display: block;
+				-webkit-box-shadow: -2px 4px 14px rgba(50, 50, 50, 0.75);
+				-moz-box-shadow:    -2px 4px 14px rgba(50, 50, 50, 0.75);
+				box-shadow:         -2px 4px 14px rgba(50, 50, 50, 0.75);
+			}		
 		}
 	}
 }
@@ -356,4 +363,25 @@ hr.white {
 	color: $white; 
 	background-color: $white; 
 	border: none; 
+}
+
+/*-----------TEST DRIVER FORM-----------*/
+section#test-driver-form {
+	margin:0;
+	padding:0;
+	width: 500px;
+	padding: 20px;
+	background: #ccc;
+	
+	h1 { font-size: 24px; text-align: center; }
+	
+	div.control-group input {
+	  width: 300px;
+	  height: auto;
+	  padding: 10px;
+	  border: 1px solid #aaa;
+	  -moz-box-shadow: inset 0 0 2px #000;
+	  -webkit-box-shadow: inset 0 0 2px #000;
+	  box-shadow: inner 0 0 2px #000;
+	}
 }
