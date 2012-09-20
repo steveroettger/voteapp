@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120918185058) do
+ActiveRecord::Schema.define(:version => 20120920134927) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -66,12 +66,23 @@ ActiveRecord::Schema.define(:version => 20120918185058) do
     t.string   "twitter_link"
   end
 
+  create_table "giveaway_entries", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "giveaway_entries", ["email"], :name => "index_giveaway_entries_on_email", :unique => true
+
   create_table "test_drivers", :force => true do |t|
     t.string   "name"
     t.string   "email"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "test_drivers", ["email"], :name => "index_test_drivers_on_email", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "provider"

@@ -8,15 +8,15 @@ class TestDriversController < ApplicationController
   end
   
   def create
-    @test_driver = TestDriver.new(params[:TestDriver])
+    @test_driver = TestDriver.new(params[:test_driver])
     if @test_driver.save
-      redirect_to @test_driver, notice: 'Thank you for your interest, someone will get back to you shortly.'
+      redirect_to new_test_driver_path, notice: 'Success.'
     else
       render 'new'
     end
   end
   
   def show 
-    @contestant = Contestant.find(params[:id])
+    @test_driver = TestDriver.find(params[:id])
   end
 end

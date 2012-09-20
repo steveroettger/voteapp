@@ -10,7 +10,7 @@ html, body {
 }
 
 /*-----------COLORS-----------*/
-$teal: #007B6C;
+$teal: #073029;
 $pink: #740030;
 $grayDark: #333;
 $white: #fff;
@@ -96,14 +96,12 @@ section#main-container {
 		section#main-content-teal {
 			width: 810px;
 			height: 175px;
-			background-image: -ms-linear-gradient(right, #38B09E 0%, #073029 100%);
-			background-image: -moz-linear-gradient(right, #38B09E 0%, #073029 100%);
-			background-image: -o-linear-gradient(right, #38B09E 0%, #073029 100%);
-			background-image: -webkit-gradient(linear, right top, left top, 
-							  color-stop(0, #38B09E), color-stop(1, #073029));
-			background-image: -webkit-linear-gradient(right, #38B09E 0%, #073029 100%);
-			background-image: linear-gradient(to left, #38B09E 0%, #073029 100%);
-			border-bottom: 5px solid #009246;
+			background-image: -ms-linear-gradient(bottom, #38B09E 0%, #073029 100%);
+			background-image: -moz-linear-gradient(bottom, #38B09E 0%, #073029 100%);
+			background-image: -o-linear-gradient(bottom, #38B09E 0%, #073029 100%);
+			background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #38B09E), color-stop(1, #073029));
+			background-image: -webkit-linear-gradient(bottom, #38B09E 0%, #073029 100%);
+			background-image: linear-gradient(to top, #38B09E 0%, #073029 100%);
 			
 			p { 
 				position: relative;
@@ -118,7 +116,7 @@ section#main-container {
 			width: 810px;
 			height: 150px;
 			background: #171816;
-			border-top: 5px solid #CE2B37;
+			border-top: 2px solid #ccc;
 			border-bottom: 2px solid #ccc;
 			text-align: center;
 			color: $white;
@@ -287,6 +285,20 @@ section#main-container {
 			background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #B51452), color-stop(1, #740030));
 			background-image: -webkit-linear-gradient(bottom, #B51452 0%, #740030 100%);
 			background-image: linear-gradient(to top, #B51452 0%, #740030 100%);
+			
+			iframe#form {
+			    position: relative; 
+				top: 20px;
+				width: 540px;
+			    height: 330px;
+			    margin:0 auto;
+			    padding: 0px;
+			    border: 0px;
+			    display: block;
+				-webkit-box-shadow: -2px 4px 14px rgba(50, 50, 50, 0.75);
+				-moz-box-shadow:    -2px 4px 14px rgba(50, 50, 50, 0.75);
+				box-shadow:         -2px 4px 14px rgba(50, 50, 50, 0.75);
+			}
 		}
 	}
 	
@@ -303,9 +315,11 @@ section#main-container {
 			background-image: linear-gradient(to top, #6C6F65 0%, #333631 100%);	
 			
 			iframe#form {
+				position: relative; 
+				top: 20px;
 			    width: 540px;
-			    height: 294px;
-			    margin:20px auto;
+			    height: 293px;
+			    margin:0 auto;
 			    padding: 0px;
 			    border: 0px;
 			    display: block;
@@ -355,23 +369,32 @@ section.profile-container {
 	}
 }
 
-/*-----------MISC-----------*/
-hr.white { 
-	margin:0;
-	width: 810px; 
-	height: 5px; 
-	color: $white; 
-	background-color: $white; 
-	border: none; 
-}
-
 /*-----------TEST DRIVER FORM-----------*/
 section#test-driver-form {
 	margin:0;
 	padding:0;
 	width: 500px;
 	padding: 20px;
-	background: #ccc;
+	
+	h1 { font-size: 24px; text-align: center; }
+	
+	div.control-group input {
+	  width: 300px;
+	  height: auto;
+	  padding: 10px;
+	  border: 1px solid #aaa;
+	  -moz-box-shadow: inset 0 0 2px #000;
+	  -webkit-box-shadow: inset 0 0 2px #000;
+	  box-shadow: inner 0 0 2px #000;
+	}
+}
+
+/*-----------GIVEAWAY ENTRY FORM-----------*/
+section#giveaway-entry-form {
+	margin:0;
+	padding:0;
+	width: 500px;
+	padding: 20px;
 	
 	h1 { font-size: 24px; text-align: center; }
 	
