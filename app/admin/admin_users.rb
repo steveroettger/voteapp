@@ -23,10 +23,10 @@ ActiveAdmin.register AdminUser do
   #  end
     
   #app/models/admin_user.rb
-  before_destroy :raise_if_last
-    def raise_if_last
-      if AdminUser.count < 2
-        raise "Can't delete last admin user"
-      end
-    end
+  #before_destroy :raise_if_last
+  #  def raise_if_last
+  #    if AdminUser.count < 2
+  #      raise "Can't delete last admin user"
+  #    end
+  #  end
 end
