@@ -37,5 +37,6 @@ class AdminUsersController < ApplicationController
   def destroy
     @admin_user = AdminUser.find(params[:id])
     @admin_user.destroy 
+    redirect_to admin_users_url, notice: 'Admin profile has been updated.'
   end
 end
