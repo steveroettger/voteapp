@@ -60,6 +60,7 @@ module FacebookApp
     config.assets.version = '1.0'
     
     # This fixes the asset:precompile task during slug compilation
+    config.assets.precompile += %w(active_admin.css active_admin.js)
     config.assets.initialize_on_precompile = false
   end
 end
