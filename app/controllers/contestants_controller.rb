@@ -4,9 +4,7 @@ class ContestantsController < ApplicationController
   def index
     #@contestants = Contestant.find_with_reputation(:votes, :all, order: "votes desc")
     @contestants = Contestant.all
-    if @contestants !nil
-      @contestant = Contestant.find(1)
-    end
+    #@contestant = Contestant.find(1)
   end
   
   def new
