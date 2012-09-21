@@ -290,11 +290,14 @@ section#main-container {
 			    position: relative; 
 				top: 20px;
 				width: 540px;
-			    height: 330px;
+			    height: 300px;
 			    margin:0 auto;
 			    padding: 0px;
 			    border: 0px;
 			    display: block;
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				border-radius: 10px;
 				-webkit-box-shadow: -2px 4px 14px rgba(50, 50, 50, 0.75);
 				-moz-box-shadow:    -2px 4px 14px rgba(50, 50, 50, 0.75);
 				box-shadow:         -2px 4px 14px rgba(50, 50, 50, 0.75);
@@ -318,11 +321,14 @@ section#main-container {
 				position: relative; 
 				top: 20px;
 			    width: 540px;
-			    height: 293px;
+			    height: 360px;
 			    margin:0 auto;
 			    padding: 0px;
 			    border: 0px;
 			    display: block;
+			    -webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				border-radius: 10px;
 				-webkit-box-shadow: -2px 4px 14px rgba(50, 50, 50, 0.75);
 				-moz-box-shadow:    -2px 4px 14px rgba(50, 50, 50, 0.75);
 				box-shadow:         -2px 4px 14px rgba(50, 50, 50, 0.75);
@@ -374,7 +380,7 @@ section#test-driver-form {
 	margin:0;
 	padding:0;
 	width: 500px;
-	padding: 20px;
+	padding:5px 20px;
 	
 	h1 { font-size: 24px; text-align: center; }
 	
@@ -394,7 +400,7 @@ section#giveaway-entry-form {
 	margin:0;
 	padding:0;
 	width: 500px;
-	padding: 20px;
+	padding:5px 20px;
 	
 	h1 { font-size: 24px; text-align: center; }
 	
