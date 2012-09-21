@@ -4,7 +4,9 @@ class ContestantsController < ApplicationController
   def index
     #@contestants = Contestant.find_with_reputation(:votes, :all, order: "votes desc")
     @contestants = Contestant.all
-    #@contestant = Contestant.find(1)
+    if @contestants !nil
+      @contestant = Contestant.find(1)
+    end
   end
   
   def new
@@ -38,6 +40,8 @@ class ContestantsController < ApplicationController
   end
   
   def destroy 
+    @contestant = Contestant.find(params[:id])
+    @contestant.destroy
   end
   
   #method definition for vote feature
