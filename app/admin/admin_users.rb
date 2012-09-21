@@ -17,10 +17,10 @@ ActiveAdmin.register AdminUser do
   end
   
   #app/models/admin_user.rb
-  after_create { |admin| admin.send_reset_password_instructions }
-    def password_required?
-      new_record? ? false : super
-    end
+  #after_create { |admin| admin.send_reset_password_instructions }
+  #  def password_required?
+  #    new_record? ? false : super
+  #  end
     
   #app/models/admin_user.rb
   before_destroy :raise_if_last
