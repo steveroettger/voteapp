@@ -1,5 +1,4 @@
-class ContestantsController < ApplicationController
-  before_filter :authenticate_admin_user!, only: [:new, :create, :edit, :update, :destroy]
+class AdminUsersController < ApplicationController
   
   def index
     @admin_users = AdminUser.all
