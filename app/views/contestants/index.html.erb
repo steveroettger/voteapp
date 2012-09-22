@@ -11,7 +11,7 @@ $(document).ready(function() {
 	});
 });
 </script>
-<% if user_likes_page? %>
+<%# if user_likes_page? %>
 <section id="main-container">
 	<section id="countdown">
 		<h1>FIAT EXPERIENCE COUNTDOWN</h1>
@@ -150,10 +150,12 @@ $(document).ready(function() {
 			
 		</div><!--/div#tab3.tab-pane-->
 	</div><!--/div.tab-content-->
-<% else %>
+<%# else %>
+	<!--
 	<section id="fangate">
-		<%= fangate_image %>
+		<%# fangate_image %>
 	</section>
-<% end %>
-</section>
+	-->
+<%# end %>
+</section><!--/section#main-container-->
 
