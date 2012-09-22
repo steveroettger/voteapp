@@ -1,7 +1,7 @@
 module ApplicationHelper
   #Fangate image
   def fangate_image
-    image_tag('fiat-fangate.jpg', border: 0)
+    image_tag('fiat_fangate.jpg', border: 0)
   end
   
   # Main image used in the header
