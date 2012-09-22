@@ -16,5 +16,5 @@ class User < ActiveRecord::Base
   
   def can_vote_for?(contestant)
       contestant_votes.build(value: 1, contestant: contestant).valid?
-    end
+  end
 end
