@@ -11,7 +11,7 @@ $(document).ready(function() {
 	});
 });
 </script>
-<%# if user_likes_page? %>
+<% if user_likes_page? %>
 <section id="main-container">
 	<section id="countdown">
 		<h1>FIAT EXPERIENCE COUNTDOWN</h1>
@@ -119,10 +119,15 @@ $(document).ready(function() {
 						 aria-labelledby="myModalLabel" aria-hidden="true">
 					  <div class="modal-header">
 					    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					    <h3 id="myModalLabel">Modal header</h3>
+					    <h3 id="myModalLabel">Carman Fiat Experience Promotion</h3>
 					  </div>
 					  <div class="modal-body">
-					    <p>One fine body…</p>
+					    <p style="text-align: left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+						   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 	
+						   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+						   dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
+						   id est laborum.</p>
 					  </div>
 					  <div class="modal-footer">
 					    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
@@ -145,8 +150,8 @@ $(document).ready(function() {
 			
 		</div><!--/div#tab3.tab-pane-->
 	</div><!--/div.tab-content-->
-<%# else %>
-	<!--<h1>Like This Page To Vote For Your Favorite Driver</h1>-->
-<%# end %>
+<% else %>
+	<%= fangate_image %>
+<% end %>
 </section>
 
