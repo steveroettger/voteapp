@@ -1,7 +1,6 @@
 // Override Bootstrap Styles
 
 @import "bootstrap";
-@import "jquery.ui.slider";
 
 html, body { 
 	margin: 0;
@@ -18,8 +17,7 @@ $white: #fff;
 /*-----------INDEX-----------*/
 section#main-container {
 	width: 810px;
-	height: 1215px;
-	background: $grayDark;
+	height: 1320px;
 	
 	section#countdown {
 		position: relative;
