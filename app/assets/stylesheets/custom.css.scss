@@ -15,16 +15,16 @@ $grayDark: #333;
 $white: #fff;
 
 /*-----------INDEX-----------*/
-section#fangate {
-	img { 
-		width: 810px;
-		height: 1094px;
-	}
-}
-
 section#main-container {
 	width: 810px;
 	height: 1215px;
+	
+	section#fangate {
+		img { 
+			width: 810px;
+			height: 1094px;
+		}
+	}
 	
 	section#countdown {
 		position: relative;
