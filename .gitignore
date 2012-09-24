@@ -24,4 +24,5 @@ doc/
 
 # Ignore heroku config YAML file
 /config/heroku.yml
+/config/initializers/omniauth.rb
 

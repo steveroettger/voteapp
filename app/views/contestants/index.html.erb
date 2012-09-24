@@ -11,7 +11,7 @@ $(document).ready(function() {
 	});
 });
 </script>
-<% if user_likes_page? %>
+<%# if user_likes_page? %>
 <section id="main-container">
 	<section id="countdown">
 		<h1>FIAT EXPERIENCE COUNTDOWN</h1>
@@ -84,7 +84,21 @@ $(document).ready(function() {
 							<section class="footer-main">
 								<div id="profile">
 									<section class="profile-container">
-										
+										<%= image_tag(@contestant.image_url, class: 'contestant-profile') %>
+										<h1><%= @contestant.name %></h1>
+										<p>Age:&nbsp;<%= @contestant.age %></p>
+										<p>Vocation:&nbsp;<%= @contestant.vocation %></p>
+										<p><strong>Current Vote Talley:&nbsp;</strong><%= pluralize @contestant.votes, "vote" %></p>
+										<hr class="profile">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et 
+										   dolore magna aliqua. </p>
+										<ul>
+											<li><%= link_to facebook_icon, @contestant.fb_link, target: '_blank' %></li>
+											<li><%= link_to twitter_icon, @contestant.twitter_link, target: '_blank' %></li>
+											<li><%= link_to linkedin_icon, '#', target: '_blank' %></li>
+											<li><%= link_to foursquare_icon, '#', target: '_blank' %></li>
+											<li><%= link_to instagram_icon, '#', target: '_blank' %></li>
+										</ul>
 									</section><!--/section.profile-container-->
 								</div><!--/div#profile-->
 								
@@ -150,10 +164,10 @@ $(document).ready(function() {
 			
 		</div><!--/div#tab3.tab-pane-->
 	</div><!--/div.tab-content-->
-<% else %>
+<%# else %>
 	<section id="fangate">
-		<%= fangate_image %>
+	<%# fangate_image %>
 	</section>
-<% end %>
-</section><!--/section#main-container-->
+<%# end %>
+</section>
 
