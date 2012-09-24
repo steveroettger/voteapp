@@ -227,15 +227,13 @@ section#main-container {
 									width: 15px;
 									height: 400px;
 									background: #6C6F65;
-									
-									div.car {
-										position: relative;
-										right: 5px;
-										width: 25px;
-										height: 35px;
-										background: yellow;
-										z-index: 1;
-									}
+								}
+								
+								div.car {
+									width: 25px;
+									height: 35px;
+									background: yellow;
+									z-index: 1;
 								}
 								
 								div.vote-btn  {
