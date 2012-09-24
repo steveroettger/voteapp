@@ -22,8 +22,6 @@ doc/
 .DS_Store
 .idea
 
-# Ignore config.yml
-/config/config.yml
-config/settings.local.yml
-config/settings/*.local.yml
-config/environments/*.local.yml
+# Ignore heroku config YAML file
+/config/heroku.yml
+
