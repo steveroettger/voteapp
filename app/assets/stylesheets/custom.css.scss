@@ -11,8 +11,12 @@ html, body {
 /*-----------COLORS-----------*/
 $teal: #073029;
 $pink: #740030;
-$grayDark: #333;
+$grayDark: #313430;
+$grayMid: #BFC1BA;
+$grayLight: #EDEEEE;
 $white: #fff;
+$red: #C9202F;
+$green: #66B756;
 
 /*-----------INDEX-----------*/
 section#main-container {
@@ -87,12 +91,12 @@ section#main-container {
 				display: inline;
 				margin-right: -10px;
 				padding:15px 20px 15px 20px;
-				a, a:visited { color: #fff; }	
+				a, a:visited { color: black; font-weight: bolder; }	
 			}
 			
-			li.tab1 { background: $teal; }
-			li.tab2 { background: $pink; }
-			li.tab3 { background: $grayDark; }
+			li.tab1 { background: $red; }
+			li.tab2 { background: $white; }
+			li.tab3 { background: $green; }
 			li.active a { text-decoration: underline; }
 		}
 	}
@@ -102,13 +106,7 @@ section#main-container {
 		section#main-content-teal {
 			width: 810px;
 			height: 175px;
-			background-image: -ms-linear-gradient(bottom, #38B09E 0%, #073029 100%);
-			background-image: -moz-linear-gradient(bottom, #38B09E 0%, #073029 100%);
-			background-image: -o-linear-gradient(bottom, #38B09E 0%, #073029 100%);
-			background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #38B09E), 
-							  color-stop(1, #073029));
-			background-image: -webkit-linear-gradient(bottom, #38B09E 0%, #073029 100%);
-			background-image: linear-gradient(to top, #38B09E 0%, #073029 100%);
+			background: $red;
 			
 			p { 
 				position: relative;
@@ -123,30 +121,29 @@ section#main-container {
 			width: 810px;
 			height: 150px;
 			background: #171816;
-			border-top: 2px solid #ccc;
-			border-bottom: 2px solid #ccc;
+			border-top: 1px solid $white;
+			border-bottom: 1px solid $white;
 			text-align: center;
 			color: $white;
 			
 			div.span4 {
-				position: relative;
-				top: 30px;
-				left: 30px;
-				h2 { font-size: 28px; }
-				h4 { font-size: 20px; line-height: 25px; }
+				float: right;
+				margin:32px 60px 0 0;
+				h2 { font-size: 40px; color: $green; }
+				h4 { font-size: 26px; line-height: 25px; }
 			}
 		}
 	
 		section#footer-content {
 			width: 810px;
 			height: 590px;
-			background-image: -ms-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
-			background-image: -moz-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
-			background-image: -o-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
-			background-image: -webkit-gradient(linear, left bottom, left top, 
-							  color-stop(0, #6C6F65), color-stop(1, #333631));
-			background-image: -webkit-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
-			background-image: linear-gradient(to top, #6C6F65 0%, #333631 100%);
+			background-image: -ms-radial-gradient(left bottom, ellipse farthest-corner, #4679A8 0%, #1F3572 100%);
+			background-image: -moz-radial-gradient(left bottom, ellipse farthest-corner, #4679A8 0%, #1F3572 100%);
+			background-image: -o-radial-gradient(left bottom, ellipse farthest-corner, #4679A8 0%, #1F3572 100%);
+			background-image: -webkit-gradient(radial, left bottom, 0, left bottom, 994, color-stop(0, #4679A8), 
+							  color-stop(1, #1F3572));
+			background-image: -webkit-radial-gradient(left bottom, ellipse farthest-corner, #4679A8 0%, #1F3572 100%);
+			background-image: radial-gradient(ellipse farthest-corner at left bottom, #4679A8 0%, #1F3572 100%);
 			
 			div#contestants { 
 				float: right;
@@ -177,20 +174,20 @@ section#main-container {
 				width: 770px;
 				padding-top: 20px;
 				margin:0px 0 0 20px;
-				-webkit-box-shadow: -2px 4px 14px rgba(50, 50, 50, 0.75);
-				-moz-box-shadow:    -2px 4px 14px rgba(50, 50, 50, 0.75);
-				box-shadow:         -2px 4px 14px rgba(50, 50, 50, 0.75);
+				-webkit-box-shadow: 0 4px 4px -2px #000000;
+				   -moz-box-shadow: 0 4px 4px -2px #000000;
+				        box-shadow: 0 4px 4px -2px #000000;
 				
 				ul.nav.nav-tabs {
 					margin-bottom: 0;
 					border: none;
 					li { 
 						padding:15px 10px 15px 10px;
-						background: #BBBDB2; 
+						background: $grayLight; 
 						h2 { 
 							font-size: 18px;
 							color: $red; 
-							text-shadow:1px 1px 1px #333;
+							text-shadow:1px 1px 1px $grayDark;
 						} 
 					}
 				}
@@ -199,14 +196,14 @@ section#main-container {
 					section.footer-main {
 						width: 770px;
 						height: 450px;
-						background: #BBBDB2;
+						background: $grayLight;
 						
 						div#profile {
 							float: left;
 							margin:10px 0 0 10px;
 							width: 270px;
 							height: 430px;
-							background: #93968A;
+							background: $grayMid;
 						}
 						
 						div#leaderboard {
@@ -219,14 +216,14 @@ section#main-container {
 								margin-left: 21px;
 								width: 35px;
 								height: 400px;
-								background: #93968A;
+								background: $grayMid;
 								&:first-child { margin-left: 10px; }
 								
 								div.tracks-inner {
 									margin-left: 10px;
 									width: 15px;
 									height: 400px;
-									background: #6C6F65;
+									background: $grayDark;
 								}
 								
 								div.car {
@@ -234,6 +231,9 @@ section#main-container {
 									height: 35px;
 									background: yellow;
 									z-index: 1;
+									-webkit-border-radius: 5px;
+									-moz-border-radius: 5px;
+									border-radius: 5px;
 								}
 								
 								div.vote-btn  {
@@ -246,18 +246,14 @@ section#main-container {
 									-moz-border-radius: 25px;
 									border-radius: 25px;
 									z-index: 2;
-									background-image: -ms-radial-gradient(center, circle farthest-corner, 
-													  #B51452 0%, #740030 100%);
-									background-image: -moz-radial-gradient(center, circle farthest-corner, 
-													  #B51452 0%, #740030 100%);
-									background-image: -o-radial-gradient(center, circle farthest-corner, 
-													  #B51452 0%, #740030 100%);
-									background-image: -webkit-gradient(radial, center center, 0, center center, 497, 
-												  	  color-stop(0, #B51452), color-stop(1, #740030));
-									background-image: -webkit-radial-gradient(center, 
-													  circle farthest-corner, #B51452 0%, #740030 100%);
-									background-image: radial-gradient(circle farthest-corner at center, 
-													  #B51452 0%, #740030 100%);
+									background-image: -ms-radial-gradient(center, circle farthest-side, #4679A8 0%, #1F3572 100%);
+									background-image: -moz-radial-gradient(center, circle farthest-side, #4679A8 0%, #1F3572 100%);
+									background-image: -o-radial-gradient(center, circle farthest-side, #4679A8 0%, #1F3572 100%);
+									background-image: -webkit-gradient(radial, center center, 0, center center, 477, 
+													  color-stop(0, #4679A8), color-stop(1, #1F3572));
+									background-image: -webkit-radial-gradient(center, circle farthest-side, #4679A8 0%, 
+													  #1F3572 100%);
+									background-image: radial-gradient(circle farthest-side at center, #4679A8 0%, #1F3572 100%);
 									&:hover { box-shadow:0 0 4px #222 inset; }
 									
 									a, a:visited { 
@@ -295,12 +291,7 @@ section#main-container {
 		section#main-content-pink {
 			width: 810px;
 			height: 400px; 
-			background-image: -ms-linear-gradient(bottom, #B51452 0%, #740030 100%);
-			background-image: -moz-linear-gradient(bottom, #B51452 0%, #740030 100%);
-			background-image: -o-linear-gradient(bottom, #B51452 0%, #740030 100%);
-			background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #B51452), color-stop(1, #740030));
-			background-image: -webkit-linear-gradient(bottom, #B51452 0%, #740030 100%);
-			background-image: linear-gradient(to top, #B51452 0%, #740030 100%);
+			background: $white;
 			
 			iframe#form {
 			    position: relative; 
@@ -325,13 +316,7 @@ section#main-container {
 		section#main-content-gray {
 			width: 810px;
 			height: 400px;
-			background-image: -ms-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
-			background-image: -moz-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
-			background-image: -o-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
-			background-image: -webkit-gradient(linear, left bottom, left top, 
-							  color-stop(0, #6C6F65), color-stop(1, #333631));
-			background-image: -webkit-linear-gradient(bottom, #6C6F65 0%, #333631 100%);
-			background-image: linear-gradient(to top, #6C6F65 0%, #333631 100%);	
+			background: $green;
 			
 			iframe#form {
 				position: relative; 

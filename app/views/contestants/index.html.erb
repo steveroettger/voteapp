@@ -88,10 +88,11 @@ $(document).ready(function() {
 										<h1><%= @contestant.name %></h1>
 										<p>Age:&nbsp;<%= @contestant.age %></p>
 										<p>Vocation:&nbsp;<%= @contestant.vocation %></p>
-										<p><strong>Current Vote Talley:&nbsp;<%= pluralize @contestant.votes, "vote" %></strong></p>
+										<p><strong>Current Vote Talley:&nbsp;
+												   <%= pluralize @contestant.votes, "vote" %></strong></p>
 										<hr class="profile">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et 
-										   dolore magna aliqua. </p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+										   incididunt ut labore et dolore magna aliqua. </p>
 										<ul>
 											<li><%= link_to facebook_icon, @contestant.fb_link, target: '_blank' %></li>
 											<li><%= link_to twitter_icon, @contestant.twitter_link, target: '_blank' %></li>
@@ -106,8 +107,14 @@ $(document).ready(function() {
 									<% @contestants.each do |contestant| %>
 										<div class="tracks">
 											<div class="tracks-inner">
-												<div class="car" style="position: relative; top: <%= contestant.car_position %>px; right: 5px;"><%= contestant.votes %></div>
-											</div>
+												<div class="car" 
+													style="position: relative; 
+														   top: <%= contestant.car_position %>px; 
+														   right: 5px;
+														   text-align: center;">
+													<%= contestant.votes %>
+												</div>
+											</div><!--/div.tracks-inner-->
 											<div class="vote-btn">
 												<% if current_user == nil %>
 													<%= link_to "Vote", "/auth/facebook" %>
@@ -115,13 +122,10 @@ $(document).ready(function() {
 													<%= link_to "Vote", vote_contestant_path(contestant, value: 1), 
 														method: "post" %>
 												<% end %>
-											</div>
-											
-										</div>
+											</div><!--/div.vote-btn-->
+										</div><!--/div.tracks-->
 									<% end %>
 								</div><!--/div#leaderboard-->
-								
-								
 							</section><!--/section.footer-main-->
 						</div><!--/div#tab4-->
 					</div><!--/div.tab-content-->
