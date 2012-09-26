@@ -9,19 +9,20 @@ html, body {
 }
 
 /*-----------COLORS-----------*/
-$teal: #073029;
-$pink: #740030;
+$teal: #00B19F;
+$pink: #B51452;
+$gray: #7A7A6F;
 $grayDark: #313430;
 $grayMid: #BFC1BA;
 $grayLight: #EDEEEE;
 $white: #fff;
-$red: #C9202F;
-$green: #66B756;
+$red: #D92128;
+$green: #72BC42;
 
 /*-----------INDEX-----------*/
 section#main-container {
 	width: 810px;
-	height: 1215px;
+	/* height: 1215px; */
 	
 	section#fangate {
 		img { 
@@ -30,9 +31,17 @@ section#main-container {
 		}
 	}
 	
+	section#logo {
+		float: left;
+		margin: 30px 0 0 40px;
+		width: 207px;
+		height: 207px;
+		background: url('/assets/fiat-logo.png');
+	}
+	
 	section#countdown {
-		position: relative;
-		left: 520px; 
+		float: right;
+		margin-right: 40px;
 		width: 250px;
 		height: 105px;
 		color: $white;
@@ -43,10 +52,10 @@ section#main-container {
 		margin:0 auto;
 		position: relative;
 		top: 39px;
-		width: 206px; 
-		height: 2px;  
-		color: rgba(0,0,0,.6);
-		background-color: rgba(0,0,0,.6); 
+		width: 190px; 
+		height: 3px;  
+		color: rgba(0,0,0,.3);
+		background-color: rgba(0,0,0,.3); 
 		border: none;
 		} 
 		
@@ -71,42 +80,70 @@ section#main-container {
 	}
 	
 	section#main-header {
-		margin-top: -105px;
-		
-		img {
-			width: 810px;
-			height: 300px;
-		}
-		
+		width: 810px;
+		height: 330px;
+		background: url('/assets/header-img-2.jpg') no-repeat; 
+	}
+	
+	section#tabbed-nav {
+		border-bottom: 2px solid $white;
 		ul.tabs {
 			position: relative;
-			top: -28px;
+			top: -26px;
 			left: -25px;
-			margin-bottom: -15px;
+			margin-bottom: -19px;
 			list-style: none;
 			padding: 0;
 			z-index: 1;
-			
+		
 			li {
 				display: inline;
-				margin-right: -10px;
-				padding:15px 20px 15px 20px;
-				a, a:visited { color: black; font-weight: bolder; }	
+				margin:0 2px 0 0;
+				&:first-child { margin-left: 15px; }
+				a, a:visited { 
+					padding:8px 30px 8px 30px;
+					color: $white; 
+					font-family: Cambria, Georgia, serif;
+					font-size: 16px;
+					font-weight: bolder; 
+					text-shadow: 1px 1px 3px #000;
+					border: 2px solid $white;
+					border-bottom: none;
+					background-image: -ms-linear-gradient(top, #B51452 0%, #740030 100%);
+					background-image: -moz-linear-gradient(top, #B51452 0%, #740030 100%);
+					background-image: -o-linear-gradient(top, #B51452 0%, #740030 100%);
+					background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #B51452), color-stop(1, #740030));
+					background-image: -webkit-linear-gradient(top, #B51452 0%, #740030 100%);
+					background-image: linear-gradient(to bottom, #B51452 0%, #740030 100%);
+					-webkit-border-top-left-radius: 5px;
+					-webkit-border-top-right-radius: 20px;
+					-moz-border-radius-topleft: 5px;
+					-moz-border-radius-topright: 20px;
+					border-top-left-radius: 5px;
+					border-top-right-radius: 20px;
+					&:hover { text-decoration: none; background: $teal; }
+				}	
 			}
 			
-			li.tab1 { background: $red; }
-			li.tab2 { background: $white; }
-			li.tab3 { background: $green; }
-			li.active a { text-decoration: underline; }
+			li.active  a, li.active a:visited { background: $teal; border-bottom: 2px solid $teal; }
 		}
+	}
+	
+	section.main-content { 
+		background-image: -ms-linear-gradient(top, #00B19F 0%, #006A60 100%);
+		background-image: -moz-linear-gradient(top, #00B19F 0%, #006A60 100%);
+		background-image: -o-linear-gradient(top, #00B19F 0%, #006A60 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #00B19F), color-stop(1, #006A60));
+		background-image: -webkit-linear-gradient(top, #00B19F 0%, #006A60 100%);
+		background-image: linear-gradient(to bottom, #00B19F 0%, #006A60 100%);
+		border-bottom: 5px solid $green;
 	}
 	
 	div#tab1 {	
 	
-		section#main-content-teal {
+		section#main-content-tab1 {
 			width: 810px;
 			height: 175px;
-			background: $red;
 			
 			p { 
 				position: relative;
@@ -115,35 +152,55 @@ section#main-container {
 				font-size: 16px;
 				color: #fff; 
 			}
+			
+			.vote-btn-big {
+				float: right;
+				margin:-1px 40px 0 0;
+				width: 232px;
+				height: 176px;
+				background: url('/assets/vote-btn-big.png');
+			}
 		}
 	
 		section#giveaway-block {
 			width: 810px;
-			height: 150px;
-			background: #171816;
-			border-top: 1px solid $white;
-			border-bottom: 1px solid $white;
+			height: 120px;
+			background: url('/assets/asfalt.png') repeat;
+			border-top: 5px solid $red;
+			border-bottom: 2px solid $white;
 			text-align: center;
 			color: $white;
 			
 			div.span4 {
 				float: right;
-				margin:32px 60px 0 0;
-				h2 { font-size: 40px; color: $green; }
-				h4 { font-size: 26px; line-height: 25px; }
+				margin:10px 60px 0 0;
+				
+				h2 a, h2 a:visited { 
+					font-family: Cambria, Georgia, serif;
+					font-size: 32px; 
+					color: $white; 
+					text-shadow:3px 3px 3px $black;
+					&:hover { text-decoration: none; }
+				}
+				
+				h4 { 
+					font-family: Cambria, Georgia, serif;
+					font-size: 20px; 
+					line-height: 20px; 
+					text-shadow:3px 3px 3px $black; 
+				}
 			}
 		}
 	
 		section#footer-content {
 			width: 810px;
 			height: 590px;
-			background-image: -ms-radial-gradient(left bottom, ellipse farthest-corner, #4679A8 0%, #1F3572 100%);
-			background-image: -moz-radial-gradient(left bottom, ellipse farthest-corner, #4679A8 0%, #1F3572 100%);
-			background-image: -o-radial-gradient(left bottom, ellipse farthest-corner, #4679A8 0%, #1F3572 100%);
-			background-image: -webkit-gradient(radial, left bottom, 0, left bottom, 994, color-stop(0, #4679A8), 
-							  color-stop(1, #1F3572));
-			background-image: -webkit-radial-gradient(left bottom, ellipse farthest-corner, #4679A8 0%, #1F3572 100%);
-			background-image: radial-gradient(ellipse farthest-corner at left bottom, #4679A8 0%, #1F3572 100%);
+			background-image: -ms-linear-gradient(bottom, #7A7A6F 0%, #403F38 100%);
+			background-image: -moz-linear-gradient(bottom, #7A7A6F 0%, #403F38 100%);
+			background-image: -o-linear-gradient(bottom, #7A7A6F 0%, #403F38 100%);
+			background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #7A7A6F), color-stop(1, #403F38));
+			background-image: -webkit-linear-gradient(bottom, #7A7A6F 0%, #403F38 100%);
+			background-image: linear-gradient(to top, #7A7A6F 0%, #403F38 100%);
 			
 			div#contestants { 
 				float: right;
@@ -174,20 +231,28 @@ section#main-container {
 				width: 770px;
 				padding-top: 20px;
 				margin:0px 0 0 20px;
-				-webkit-box-shadow: 0 4px 4px -2px #000000;
-				   -moz-box-shadow: 0 4px 4px -2px #000000;
-				        box-shadow: 0 4px 4px -2px #000000;
+				-webkit-box-shadow: 0 5px 5px -3px #000000;
+				-moz-box-shadow: 0 5px 5px -3px #000000;
+				box-shadow: 0 5px 5px -3px #000000;
 				
 				ul.nav.nav-tabs {
 					margin-bottom: 0;
 					border: none;
 					li { 
 						padding:15px 10px 15px 10px;
-						background: $grayLight; 
+						background: $grayLight;
+						-webkit-border-top-left-radius: 5px;
+						-webkit-border-top-right-radius: 5px;
+						-moz-border-radius-topleft: 5px;
+						-moz-border-radius-topright: 5px;
+						border-top-left-radius: 5px;
+						border-top-right-radius: 5px;
+						 
 						h2 { 
 							font-size: 18px;
-							color: $red; 
-							text-shadow:1px 1px 1px $grayDark;
+							font-family: Cambria, Georgia, serif;
+							color: $pink; 
+							text-shadow: 1px 1px 3px $black;
 						} 
 					}
 				}
@@ -204,6 +269,9 @@ section#main-container {
 							width: 270px;
 							height: 430px;
 							background: $grayMid;
+							-webkit-box-shadow: 1px 2px 3px rgba(50, 50, 50, 0.75);
+							-moz-box-shadow:    1px 2px 3px rgba(50, 50, 50, 0.75);
+							box-shadow:         1px 2px 3px rgba(50, 50, 50, 0.75);
 						}
 						
 						div#leaderboard {
@@ -228,8 +296,8 @@ section#main-container {
 								
 								div.car {
 									width: 25px;
-									height: 35px;
-									background: yellow;
+									height: 44px;
+									background: url('/assets/car.png');
 									z-index: 1;
 									-webkit-border-radius: 5px;
 									-moz-border-radius: 5px;
@@ -238,30 +306,33 @@ section#main-container {
 								
 								div.vote-btn  {
 									position: relative;
-									margin:-8px 0 0 -5px;
+									margin:-8px 0 0 -8px;
 									width: 45px;
 									height: 45px;
-									box-shadow:1px 1px 3px #6C6F65;
+									box-shadow:1px 1px 3px $grayDark;
 									-webkit-border-radius: 25px;
 									-moz-border-radius: 25px;
 									border-radius: 25px;
+									border: 2px solid $white;
 									z-index: 2;
-									background-image: -ms-radial-gradient(center, circle farthest-side, #4679A8 0%, #1F3572 100%);
-									background-image: -moz-radial-gradient(center, circle farthest-side, #4679A8 0%, #1F3572 100%);
-									background-image: -o-radial-gradient(center, circle farthest-side, #4679A8 0%, #1F3572 100%);
-									background-image: -webkit-gradient(radial, center center, 0, center center, 477, 
-													  color-stop(0, #4679A8), color-stop(1, #1F3572));
-									background-image: -webkit-radial-gradient(center, circle farthest-side, #4679A8 0%, 
-													  #1F3572 100%);
-									background-image: radial-gradient(circle farthest-side at center, #4679A8 0%, #1F3572 100%);
+									background-image: -ms-radial-gradient(center, circle closest-corner, #B51452 0%, #740030 100%);
+									background-image: -moz-radial-gradient(center, circle closest-corner, #B51452 0%, 
+													  #740030 100%);
+									background-image: -o-radial-gradient(center, circle closest-corner, #B51452 0%, #740030 100%);
+									background-image: -webkit-gradient(radial, center center, 0, center center, 497, 
+													  color-stop(0, #B51452), color-stop(1, #740030));
+									background-image: -webkit-radial-gradient(center, circle closest-corner, #B51452 0%, 
+												      #740030 100%);
+									background-image: radial-gradient(circle closest-corner at center, #B51452 0%, #740030 100%);
 									&:hover { box-shadow:0 0 4px #222 inset; }
 									
 									a, a:visited { 
 										position: relative; 
-										top: 12px; 
-										left: 9px; 
+										top: 10px; 
+										left: 0px; 
 										text-align: center; 
 										color: $white; 
+										font-family: Cambria, Georgia, serif;
 										font-size: 14px;
 										&:hover { text-decoration: none; color: $white; }
 									}
@@ -273,25 +344,13 @@ section#main-container {
 					}
 				}
 			}
-			
-			section.termsLink { 
-				margin-top:20px;
-				text-align: center; 
-			}
-			
-			section.termsLink a, section.termsLink a:visited {  
-				color: $white;
-				&:hover { text-decoration: underline; }
-			}
-			
 		}
 	}
 	
 	div#tab2 {
-		section#main-content-pink {
+		section#main-content-tab2 {
 			width: 810px;
 			height: 400px; 
-			background: $white;
 			
 			iframe#form {
 			    position: relative; 
@@ -313,10 +372,9 @@ section#main-container {
 	}
 	
 	div#tab3 {
-		section#main-content-gray {
+		section#main-content-tab3 {
 			width: 810px;
 			height: 400px;
-			background: $green;
 			
 			iframe#form {
 				position: relative; 
@@ -338,6 +396,28 @@ section#main-container {
 	}
 }
 
+/*-----------TERMS LINK & POP-UP-----------*/
+section.termsLink { 
+	margin-top:20px;
+	text-align: center; 
+}
+
+section.termsLink a, section.termsLink a:visited {  
+	color: $white;
+	font-size: 14px;
+	font-family: Cambria, Georgia, serif;
+	text-shadow: 1px 1px 3px #000;
+	&:hover { text-decoration: underline; }
+}
+
+/*----------MINI FOOTER TAB----------*/
+section.mini-footer {
+	width: 810px;
+	height: 70px;
+	border-top: 5px solid $red;
+	background: $gray;
+}
+
 /*-----------CONTESTANT PROFILE-----------*/
 section#main-profile {
 	width: 270px;
@@ -355,7 +435,7 @@ section.profile-container {
 		background: #171816;
 	}
 	
-	h1 { font-size: 18px; }
+	h1 { font-family: Cambria, Georgia, serif; font-size: 18px; }
 
 	hr.profile { 
 		margin:0px 0 10px 0;
@@ -374,26 +454,8 @@ section.profile-container {
 			&:hover { opacity: .80; }
 		}
 	}
-}
-
-/*-----------TEST DRIVER FORM-----------*/
-section#test-driver-form {
-	margin:0;
-	padding:0;
-	width: 500px;
-	padding:5px 20px;
 	
-	h1 { font-size: 24px; text-align: center; }
-	
-	div.control-group input {
-	  width: 300px;
-	  height: auto;
-	  padding: 10px;
-	  border: 1px solid #aaa;
-	  -moz-box-shadow: inset 0 0 2px #000;
-	  -webkit-box-shadow: inset 0 0 2px #000;
-	  box-shadow: inner 0 0 2px #000;
-	}
+	p { font-family: Cambria, Georgia, serif; }
 }
 
 /*-----------GIVEAWAY ENTRY FORM-----------*/
@@ -403,7 +465,7 @@ section#giveaway-entry-form {
 	width: 500px;
 	padding:5px 20px;
 	
-	h1 { font-size: 24px; text-align: center; }
+	h1 { font-family: Cambria, Georgia, serif; font-size: 24px; text-align: center; }
 	
 	div.control-group input {
 	  width: 300px;
@@ -414,4 +476,33 @@ section#giveaway-entry-form {
 	  -webkit-box-shadow: inset 0 0 2px #000;
 	  box-shadow: inner 0 0 2px #000;
 	}
+}
+
+/*-----------TEST DRIVER FORM-----------*/
+section#test-driver-form {
+	margin:0;
+	padding:0;
+	width: 500px;
+	padding:5px 20px;
+	
+	h1 { font-family: Cambria, Georgia, serif; font-size: 24px; text-align: center; }
+	
+	div.control-group input {
+	  width: 300px;
+	  height: auto;
+	  padding: 10px;
+	  border: 1px solid #aaa;
+	  -moz-box-shadow: inset 0 0 2px #000;
+	  -webkit-box-shadow: inset 0 0 2px #000;
+	  box-shadow: inner 0 0 2px #000;
+	}
+}
+
+/*-----------MISC-----------*/
+hr.white {
+	border: none;
+	margin: 0;
+	height: 5px;
+	background: $white;
+	color: $white;
 }

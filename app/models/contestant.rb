@@ -8,6 +8,6 @@ class Contestant < ActiveRecord::Base
   end
   
   def car_position
-    car_position = 365 - contestant_votes.sum(:value)
+    car_position = 357 - contestant_votes.sum(:value)
   end
 end

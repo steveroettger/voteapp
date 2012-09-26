@@ -6,7 +6,7 @@ module ApplicationHelper
   
   # Main image used in the header
   def header_img
-    image_tag('header-img.jpeg', border: 0)
+    image_tag('header-img-2.jpg', border: 0)
   end
   
   # Icons for contestant profile section
@@ -29,5 +29,8 @@ module ApplicationHelper
   def instagram_icon
     image_tag('instagram.png', border: 0)
   end
-
+  
+  def vote_text
+    image_tag('vote-text.png', border: 0)
+  end
 end

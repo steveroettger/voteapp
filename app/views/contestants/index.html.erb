@@ -11,43 +11,43 @@ $(document).ready(function() {
 	});
 });
 </script>
-<% if user_likes_page? %>
+<%# if user_likes_page? %>
 <section id="main-container">
-	<section id="countdown">
-		<h1>FIAT EXPERIENCE COUNTDOWN</h1>
-		<hr class="divider">
-		<table class="table">
-			<thead>
-				<tr>
-					<th><span class="desc">Days</span></th>
-					<th><span class="desc">Hours</span></th>
-					<th><span class="desc">Minutes</span></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><span class="days digit">00</span></td>
-					<td><span class="hours digit">00</span></td>
-					<td><span class="mins digit">00</span></td>
-				</tr>
-			</tbody>
-		</table><!--/table.table-->
-	</section><!--/section#countdown-->
-	
 	<section id="main-header">
-		<%= header_img %>
-		<section id="tabbed-nav">
-			<ul class="tabs">
-				<li class="tab1 active"><a href="#tab1" data-toggle="tab">CARMAN FIAT EXPERIENCE</a></li>
-				<li class="tab2"><a href="#tab2" data-toggle="tab">WIN FREE FIAT SWAG</a></li>
-				<li class="tab3"><a href="#tab3" data-toggle="tab">GRAB YOUR EXPERIENCE</a></li>
-			</ul><!--/ul.tabs-->
-		</section><!--/section#tabbed-nav-->
+		<section id="logo"></section>
+		<section id="countdown">
+			<h1>FIAT EXPERIENCE COUNTDOWN</h1>
+			<hr class="divider">
+			<table class="table">
+				<thead>
+					<tr>
+						<th><span class="desc">Days</span></th>
+						<th><span class="desc">Hours</span></th>
+						<th><span class="desc">Minutes</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="days digit">00</span></td>
+						<td><span class="hours digit">00</span></td>
+						<td><span class="mins digit">00</span></td>
+					</tr>
+				</tbody>
+			</table><!--/table.table-->
+		</section><!--/section#countdown-->
 	</section><!--/section#main-header-->
+	
+	<section id="tabbed-nav">
+		<ul class="tabs">
+			<li class="tab1 active"><a href="#tab1" data-toggle="tab">THE EXPERIENCE</a></li>
+			<li class="tab2"><a href="#tab2" data-toggle="tab">WIN FIAT SWAG</a></li>
+			<li class="tab3"><a href="#tab3" data-toggle="tab">TAKE A SPIN</a></li>
+		</ul><!--/ul.tabs-->
+	</section><!--/section#tabbed-nav-->
 	
 	<div class="tab-content">
 		<div id="tab1" class="tab-pane active">
-			<section id="main-content-teal">
+			<section class="main-content" id="main-content-tab1">
 				<div class="row">
 					<div class="span5">
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
@@ -55,13 +55,15 @@ $(document).ready(function() {
 					   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
 					   consequat.</p>
 					</div><!--/div.span5-->
+					<div class="vote-btn-big"></div>
 				</div><!--/div.row-->
-			</section><!--/section.main-content.teal-->
+			</section><!--/section.main-content-->
+			<hr class="white">
 			<section id="giveaway-block">
 				<div class="row">
 					<div class="span4">
-						<h2>You Could Win</h2>
-						<h4>Awesome Prizes for <br/>Helping Your Friends!</h4>
+						<h2><a href="#tab2" data-toggle="tab">CLICK for a<br/>CHANCE to WIN</a></h2>
+						<h4>Awesome Prizes From Fiat!</h4>
 					</div><!--/div.span4-->
 					
 				</div><!--/div.row-->
@@ -84,24 +86,22 @@ $(document).ready(function() {
 							<section class="footer-main">
 								<div id="profile">
 									<section class="profile-container">
-										<!--
-										<%# image_tag(@contestant.image_url, class: 'contestant-profile') %>
-										<h1><%# @contestant.name %></h1>
-										<p>Age:&nbsp;<%# @contestant.age %></p>
-										<p>Vocation:&nbsp;<%# @contestant.vocation %></p>
+										<%= image_tag(@contestant.image_url, class: 'contestant-profile') %>
+										<h1><%= @contestant.name %></h1>
+										<p>Age:&nbsp;<%= @contestant.age %></p>
+										<p>Vocation:&nbsp;<%= @contestant.vocation %></p>
 										<p><strong>Current Vote Talley:&nbsp;
-												   <%# pluralize @contestant.votes, "vote" %></strong></p>
+												   <%= pluralize @contestant.votes, "vote" %></strong></p>
 										<hr class="profile">
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 										   incididunt ut labore et dolore magna aliqua. </p>
 										<ul>
-											<li><%# link_to facebook_icon, @contestant.fb_link, target: '_blank' %></li>
-											<li><%# link_to twitter_icon, @contestant.twitter_link, target: '_blank' %></li>
-											<li><%# link_to linkedin_icon, '#', target: '_blank' %></li>
-											<li><%# link_to foursquare_icon, '#', target: '_blank' %></li>
-											<li><%# link_to instagram_icon, '#', target: '_blank' %></li>
+											<li><%= link_to facebook_icon, @contestant.fb_link, target: '_blank' %></li>
+											<li><%= link_to twitter_icon, @contestant.twitter_link, target: '_blank' %></li>
+											<li><%= link_to linkedin_icon, '#', target: '_blank' %></li>
+											<li><%= link_to foursquare_icon, '#', target: '_blank' %></li>
+											<li><%= link_to instagram_icon, '#', target: '_blank' %></li>
 										</ul>
-										-->
 									</section><!--/section.profile-container-->
 								</div><!--/div#profile-->
 								
@@ -110,18 +110,17 @@ $(document).ready(function() {
 										<div class="tracks">
 											<div class="tracks-inner">
 												<div class="car" 
-													style="position: relative; 
-														   top: <%= contestant.car_position %>px; 
-														   right: 5px;
-														   text-align: center;">
-													<%= contestant.votes %>
-												</div>
+													 style="position: relative; 
+														    top: <%= contestant.car_position %>px; 
+														    right: 5px;
+														    text-align: center;">
+												</div><!--/div.car-->
 											</div><!--/div.tracks-inner-->
 											<div class="vote-btn">
 												<% if current_user == nil %>
-													<%= link_to "Vote", "/auth/facebook" %>
+													<%= link_to vote_text, "/auth/facebook" %>
 												<% else %>
-													<%= link_to "Vote", vote_contestant_path(contestant, value: 1), 
+													<%= link_to vote_text, vote_contestant_path(contestant, value: 1), 
 														method: "post" %>
 												<% end %>
 											</div><!--/div.vote-btn-->
@@ -134,11 +133,44 @@ $(document).ready(function() {
 				</section><!--/section.tabbable-->
 				
 				<section class="termsLink">
-					<a href="#myModal" role="button" data-toggle="modal">
+					<a href="#Modaltab1" role="button" data-toggle="modal">
 						Carman Fiat Experience Promotion Rules &amp; Responsibilities
 					</a>
 					<!-- Modal -->
-					<div class="modal hide fade in" id="myModal" tabindex="-1" role="dialog" 
+					<div class="modal hide fade in" id="Modaltab1" tabindex="-1" role="dialog" 
+						 aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-header">
+					    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					    <h3 id="myModalLabel">Carman Fiat Experience Promotion</h3>
+					  </div>
+					  <div class="modal-body">
+					    <p style="text-align: left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+						   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 	
+						   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+						   dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
+						   id est laborum.</p>
+					  </div>
+					  <div class="modal-footer">
+					    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+					  </div>
+					</div>
+				</section><!--/section.termsLink-->
+			</section><!--/section#footer-content-->
+		</div><!--/div#tab1.tab-pane-->
+		
+		<div id="tab2" class="tab-pane">
+			<section class="main-content" id="main-content-tab2">
+				<iframe id="form" src="/giveaway_entries/new"></iframe>
+			</section><!--/section.main-content-->
+			<hr class="white">
+			<section class="mini-footer">
+				<section class="termsLink">
+					<a href="#Modaltab2" role="button" data-toggle="modal">
+						Carman Fiat Experience Promotion Rules &amp; Responsibilities
+					</a>
+					<!-- Modal -->
+					<div class="modal hide fade in" id="Modaltab2" tabindex="-1" role="dialog" 
 						 aria-labelledby="myModalLabel" aria-hidden="true">
 					  <div class="modal-header">
 					    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -157,26 +189,46 @@ $(document).ready(function() {
 					  </div>
 					</div>
 				</section>
-			</section><!--/section#footer-content-->
-		</div><!--/div#tab1.tab-pane-->
-		
-		<div id="tab2" class="tab-pane">
-			<section id="main-content-pink">
-				<iframe id="form" src="/giveaway_entries/new"></iframe>
-			</section><!--/section.main-content.pink-->
+			</section><!--/section.mini-footer-->
 		</div><!--/div#tab2.tab-pane-->
 			
 		<div id="tab3" class="tab-pane">
-			<section id="main-content-gray">
+			<section class="main-content" id="main-content-tab3">
 				<iframe id="form" src="/test_drivers/new"></iframe>
-			</section><!--/section.main-content.gray-->
-			
+			</section><!--/section.main-content-->
+			<hr class="white">
+			<section class="mini-footer">
+				<section class="termsLink">
+					<a href="#Modaltab3" role="button" data-toggle="modal">
+						Carman Fiat Experience Promotion Rules &amp; Responsibilities
+					</a>
+					<!-- Modal -->
+					<div class="modal hide fade in" id="Modaltab3" tabindex="-1" role="dialog" 
+						 aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-header">
+					    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					    <h3 id="myModalLabel">Carman Fiat Experience Promotion</h3>
+					  </div>
+					  <div class="modal-body">
+					    <p style="text-align: left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+						   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 	
+						   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+						   dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
+						   id est laborum.</p>
+					  </div>
+					  <div class="modal-footer">
+					    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+					  </div>
+					</div>
+				</section>
+			</section><!--/section.mini-footer-->
 		</div><!--/div#tab3.tab-pane-->
 	</div><!--/div.tab-content-->
-<% else %>
+<%# else %>
 	<section id="fangate">
-	<%= fangate_image %>
+	<%# fangate_image %>
 	</section>
-<% end %>
+<%# end %>
 </section>
 
