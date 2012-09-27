@@ -25,7 +25,7 @@ $(document).ready(function() {
 		FB.Canvas.getPageInfo(function(pageInfo){
 			$({y: pageInfo.scrollTop}).animate(
 		    	{y: y},
-		        {duration: 1000, step: function(offset){
+		        {duration: 2000, step: function(offset){
 		        	FB.Canvas.scrollTo(0, 600);
 		        }
 		    });
