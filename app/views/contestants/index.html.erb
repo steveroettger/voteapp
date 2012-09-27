@@ -19,6 +19,12 @@ $(document).ready(function() {
 		s.preventDefault();
 		$('html,body').animate({scrollTop:$('#footer-content').offset().top}, 1000);
 	});
+	
+	$('#anchor-footer').click(function (y){
+		y.preventDefault();
+		FB.Canvas.scrollTo(0,0);
+	});
+
 });
 </script>
 <%# if user_likes_page? %>
