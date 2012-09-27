@@ -9,6 +9,16 @@ $(document).ready(function() {
 	$('#countdown').countdown({ date: '01 January 2013 12:00:00'}, function() {
 		$('#countdown').text('Campaign is over.')
 	});
+	
+	$('#activate-tab-link').click(function (f){
+		f.preventDefault();
+		$('.tab2').tab('show').addClass('active');
+	});
+	
+	$('#anchor-footer').click(function (s){
+		s.preventDefault();
+		$('html,body').animate({scrollTop:$('#footer-content').offset().top}, 1000);
+	});
 });
 </script>
 <%# if user_likes_page? %>
@@ -55,14 +65,16 @@ $(document).ready(function() {
 					   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
 					   consequat.</p>
 					</div><!--/div.span5-->
-					<div class="vote-btn-big"></div>
+					<div class="vote-btn-big">
+						<%= link_to image_tag('vote-btn-big.png'), '#footer-content', id: 'anchor-footer' %>
+					</div><!--/div.vote-btn-big-->
 				</div><!--/div.row-->
 			</section><!--/section.main-content-->
 			<hr class="white">
 			<section id="giveaway-block">
 				<div class="row">
 					<div class="span4">
-						<h2><a href="#tab2" data-toggle="tab">CLICK for a<br/>CHANCE to WIN</a></h2>
+						<h2><a href="/#tab2" data-toggle="tab" id="activate-tab-link">CLICK for a<br/>CHANCE to WIN</a></h2>
 						<h4>Awesome Prizes From Fiat!</h4>
 					</div><!--/div.span4-->
 					

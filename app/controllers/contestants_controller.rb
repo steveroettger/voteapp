@@ -44,11 +44,12 @@ class ContestantsController < ApplicationController
   
   #method definition for vote feature
   def vote
+    d = Date.parse
     vote = current_user.contestant_votes.new(value: params[:value], contestant_id: params[:id])
-    if vote.save
-      redirect_to :back
-    else
-      redirect_to :back, alert: "Unable to vote, perhaps you already did."
+    if vote.created_at == Date.now
+      redirect_to :back, alert: "Unable to vote, only vote per day."
+    else vote.save
+      redirect_to :back, alert: "Success!"
     end
   end
   
