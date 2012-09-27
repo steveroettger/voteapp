@@ -42,7 +42,7 @@ section#main-container {
 	section#countdown {
 		float: right;
 		margin-right: 40px;
-		width: 250px;
+		width: 240px;
 		height: 105px;
 		color: $white;
 		background: rgba(0,0,0,.6);
@@ -51,8 +51,8 @@ section#main-container {
 		hr.divider {
 		margin:0 auto;
 		position: relative;
-		top: 39px;
-		width: 190px; 
+		top: 35px;
+		width: 188px; 
 		height: 3px;  
 		color: rgba(0,0,0,.3);
 		background-color: rgba(0,0,0,.3); 
@@ -68,7 +68,7 @@ section#main-container {
 		}
 		
 		table.table {
-			margin:-10px auto;
+			margin:-15px auto;
 			width: 180px;
 			border: none; 
 			
