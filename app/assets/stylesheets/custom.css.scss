@@ -484,6 +484,18 @@ section.profile-container {
 	}
 	
 	p { font-family: Cambria, Georgia, serif; }
+	
+	span.vote-counter {
+		font-weight: bold;
+		padding: 3px;
+		border: 3px solid $black;
+		background-image: -ms-linear-gradient(top, #FFFFFF 0%, #EDEDEE 100%);
+		background-image: -moz-linear-gradient(top, #FFFFFF 0%, #EDEDEE 100%);
+		background-image: -o-linear-gradient(top, #FFFFFF 0%, #EDEDEE 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #EDEDEE));
+		background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #EDEDEE 100%);
+		background-image: linear-gradient(to bottom, #FFFFFF 0%, #EDEDEE 100%);
+	}
 }
 
 /*-----------GIVEAWAY ENTRY FORM-----------*/

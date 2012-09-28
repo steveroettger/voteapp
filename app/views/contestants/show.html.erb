@@ -4,7 +4,9 @@
 		<h1><%= @contestant.name %></h1>
 		<p>Age:&nbsp;<%= @contestant.age %></p>
 		<p>Vocation:&nbsp;<%= @contestant.vocation %></p>
-		<p><strong>Current Vote Talley:&nbsp;<%= pluralize @contestant.votes, "vote" %></strong></p>
+		<p><strong>Current Vote Talley:&nbsp;</strong>
+			<span class="vote-counter"><%= @contestant.votes %></span>
+		</p>
 		<hr class="profile">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et 
 		   dolore magna aliqua. </p>
