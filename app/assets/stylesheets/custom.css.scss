@@ -33,7 +33,7 @@ section#main-container {
 	
 	section#logo {
 		float: left;
-		margin: 30px 0 0 40px;
+		margin:30px 0 0 30px;
 		width: 207px;
 		height: 207px;
 		background: url('/assets/fiat-logo.png');
@@ -51,6 +51,7 @@ section#main-container {
 		h1 { 
 			margin: 0; 
 			padding: 0; 
+			font-family: Cambria, Georgia, serif;
 			font-size: 14px; 
 			text-align: center; 
 			color: $white;
@@ -98,15 +99,17 @@ section#main-container {
 	
 	section#main-header {
 		width: 810px;
-		height: 330px;
-		background: url('/assets/header-img-2.jpg') no-repeat; 
+		height: 403px;
+		background: url('/assets/main-header-img.jpg') no-repeat;
+		
+		img { border: none; } 
 	}
 	
 	section#tabbed-nav {
-		border-bottom: 2px solid $white;
+		border-bottom: 3px solid $white;
 		ul.tabs {
 			position: relative;
-			top: -26px;
+			top: -25px;
 			left: -25px;
 			margin-bottom: -19px;
 			list-style: none;
@@ -124,7 +127,7 @@ section#main-container {
 					font-size: 16px;
 					font-weight: bolder; 
 					text-shadow: 1px 1px 3px #000;
-					border: 2px solid $white;
+					border: 3px solid $white;
 					border-bottom: none;
 					background-image: -ms-linear-gradient(top, #B51452 0%, #740030 100%);
 					background-image: -moz-linear-gradient(top, #B51452 0%, #740030 100%);
@@ -142,7 +145,7 @@ section#main-container {
 				}	
 			}
 			
-			li.active  a, li.active a:visited { background: $teal; border-bottom: 2px solid $teal; }
+			li.active  a, li.active a:visited { background: $teal; border-bottom: 3px solid $teal; }
 		}
 	}
 	
@@ -181,16 +184,24 @@ section#main-container {
 	
 		section#giveaway-block {
 			width: 810px;
-			height: 120px;
+			height: 150px;
 			background: url('/assets/asfalt.png') repeat;
 			border-top: 5px solid $red;
-			border-bottom: 2px solid $white;
+			border-bottom: 3px solid $white;
 			text-align: center;
 			color: $white;
 			
+			div#swag-img {
+				float: left;
+				margin:-58px 0 0 0;
+				width:419px;
+				height:222px;
+				background: url('/assets/fiat-swag.png');
+			}
+			
 			div.span4 {
 				float: right;
-				margin:10px 60px 0 0;
+				margin:25px 60px 0 0;
 				
 				h2 a, h2 a:visited { 
 					font-family: Cambria, Georgia, serif;
@@ -221,7 +232,7 @@ section#main-container {
 			
 			div#contestants { 
 				float: right;
-				margin:20px 20px 0 0;
+				margin:8px 20px 0 0;
 				
 				img {
 					width: 55px;
@@ -247,7 +258,7 @@ section#main-container {
 			section.tabbable {
 				width: 770px;
 				padding-top: 20px;
-				margin:0px 0 0 20px;
+				margin:0 0 0 20px;
 				-webkit-box-shadow: 0 5px 5px -3px #000000;
 				-moz-box-shadow: 0 5px 5px -3px #000000;
 				box-shadow: 0 5px 5px -3px #000000;
@@ -256,17 +267,17 @@ section#main-container {
 					margin-bottom: 0;
 					border: none;
 					li { 
-						padding:15px 10px 15px 10px;
+						padding:15px 24px 15px 24px;
 						background: $grayLight;
 						-webkit-border-top-left-radius: 5px;
-						-webkit-border-top-right-radius: 5px;
+						-webkit-border-top-right-radius: 20px;
 						-moz-border-radius-topleft: 5px;
-						-moz-border-radius-topright: 5px;
+						-moz-border-radius-topright: 20px;
 						border-top-left-radius: 5px;
-						border-top-right-radius: 5px;
+						border-top-right-radius: 20px;
 						 
 						h2 { 
-							font-size: 18px;
+							font-size: 24px;
 							font-family: Cambria, Georgia, serif;
 							color: $pink; 
 							text-shadow: 1px 1px 3px $black;
@@ -330,7 +341,7 @@ section#main-container {
 									-webkit-border-radius: 25px;
 									-moz-border-radius: 25px;
 									border-radius: 25px;
-									border: 2px solid $white;
+									border: 3px solid $white;
 									z-index: 2;
 									background-image: -ms-radial-gradient(center, circle closest-corner, #B51452 0%, #740030 100%);
 									background-image: -moz-radial-gradient(center, circle closest-corner, #B51452 0%, 
@@ -516,6 +527,10 @@ section#test-driver-form {
 }
 
 /*-----------MISC-----------*/
+div.alert {
+	margin-bottom: 0;
+}
+
 hr.white {
 	border: none;
 	margin: 0;

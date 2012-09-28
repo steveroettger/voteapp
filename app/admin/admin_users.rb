@@ -1,13 +1,30 @@
 #app/admin/admin_users.rb
 ActiveAdmin.register AdminUser do
+  menu priority: 2
+
   index do
-    column :email
+    column :email do |admin_user|
+      link_to admin_user.email, [:admin, admin_user]
+    end
     column :current_sign_in_at
     column :last_sign_in_at
     column :sign_in_count
     default_actions
   end
   
+  show :title => :email do |admin_user|
+    attributes_table do
+      row :id
+      row :email
+      row :current_sign_in_at
+      row :last_sign_in_at
+      row :sign_in_count
+      row :created_at
+      row :updated_at
+    end
+    active_admin_comments
+  end
+    
   form do |f|
     f.inputs "Admin Details" do
       f.input :email

@@ -1,10 +1,11 @@
 class ContestantsController < ApplicationController
   before_filter :authenticate_admin_user!, only: [:new, :create, :edit, :update, :destroy]
+  require 'Date'
   
   def index
     #@contestants = Contestant.find_with_reputation(:votes, :all, order: "votes desc")
     @contestants = Contestant.all
-    #@contestant = Contestant.find(1)
+    @contestant = Contestant.find(1)
   end
   
   def new
@@ -44,12 +45,13 @@ class ContestantsController < ApplicationController
   
   #method definition for vote feature
   def vote
-    d = Date.parse
+    today = Time.now
+    last_vote = current_user.contestant_votes.last.created_at
     vote = current_user.contestant_votes.new(value: params[:value], contestant_id: params[:id])
-    if vote.created_at == Date.now
+    if ((today - last_vote) / 3600) <= 24
       redirect_to :back, alert: "Unable to vote, only vote per day."
     else vote.save
-      redirect_to :back, alert: "Success!"
+      redirect_to :back, notice: "Success!"
     end
   end
   
