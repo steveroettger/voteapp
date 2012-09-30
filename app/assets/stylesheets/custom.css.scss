@@ -488,7 +488,8 @@ section.profile-container {
 	
 	span.vote-counter {
 		font-weight: bold;
-		padding: 3px;
+		letter-spacing: 4px; 
+		padding:2px 4px;
 		border: 3px solid $black;
 		background-image: -ms-linear-gradient(top, #FFFFFF 0%, #EDEDEE 100%);
 		background-image: -moz-linear-gradient(top, #FFFFFF 0%, #EDEDEE 100%);
