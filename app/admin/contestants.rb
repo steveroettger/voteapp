@@ -32,4 +32,18 @@ ActiveAdmin.register Contestant do
       end
       active_admin_comments
     end
+    
+    form do |f|
+      f.inputs "Contestant Information" do
+        f.input :name
+        f.input :age
+        f.input :vocation
+        f.input :fb_link
+        f.input :twitter_link
+        f.input :image_url
+        f.input :profile_img
+        f.input :bio
+      end
+      f.buttons
+    end
 end
