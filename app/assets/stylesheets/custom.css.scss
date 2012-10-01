@@ -291,14 +291,14 @@ section#main-container {
 				div#tab4 {
 					section.footer-main {
 						width: 770px;
-						height: 450px;
+						height: 500px;
 						background: $grayLight;
 						
 						div#profile {
 							float: left;
 							margin:10px 0 0 10px;
 							width: 270px;
-							height: 430px;
+							height: 480px;
 							background: $grayMid;
 							-webkit-box-shadow: 1px 2px 3px rgba(50, 50, 50, 0.75);
 							-moz-box-shadow:    1px 2px 3px rgba(50, 50, 50, 0.75);
@@ -308,20 +308,20 @@ section#main-container {
 						div#leaderboard {
 							float: right;
 							width: 475px;
-							height: 440px;
+							height: 490px;
 								
 							div.tracks {
 								display: inline-block;
 								margin-left: 21px;
 								width: 35px;
-								height: 400px;
+								height: 450px;
 								background: $grayMid;
 								&:first-child { margin-left: 10px; }
 								
 								div.tracks-inner {
 									margin-left: 10px;
 									width: 15px;
-									height: 400px;
+									height: 450px;
 									background: $grayDark;
 								}
 								
@@ -452,7 +452,7 @@ section.mini-footer {
 /*-----------CONTESTANT PROFILE-----------*/
 section#main-profile {
 	width: 270px;
-	height: 430px;
+	height: 480px;
 }
 
 section.profile-container {
