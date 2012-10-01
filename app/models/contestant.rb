@@ -5,6 +5,9 @@ class Contestant < ActiveRecord::Base
   
   def votes
     read_attribute(:votes) || contestant_votes.sum(:value)
+    if contestant_votes.sum(:value).to_s.length = 1
+      puts "00000" + contestant_votes.sum(:value)
+    end
   end
   
 #  def self.by_votes
