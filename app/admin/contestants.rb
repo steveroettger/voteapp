@@ -8,7 +8,10 @@ ActiveAdmin.register Contestant do
       end
       column :age
       column :vocation
+      column :fb_link
+      column :twitter_link
       column :image_url
+      column :profile_img
       
       default_actions
     end
@@ -19,10 +22,11 @@ ActiveAdmin.register Contestant do
         row :name
         row :age
         row :vocation
-        row :image_url
         row :bio
         row :fb_link
         row :twitter_link
+        row :image_url
+        row :profile_img
         row :created_at
         row :updated_at
       end

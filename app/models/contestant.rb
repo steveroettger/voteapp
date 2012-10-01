@@ -14,8 +14,8 @@ class Contestant < ActiveRecord::Base
   end
   
   def car_position
-    #total track = 400px
-    #to make car start at beginning of track :: 400px - 43px (car height) = 357 px
-    car_position = 357 - contestant_votes.sum(:value)
+    #total track = 480px
+    #to make car start at beginning of track :: 480px - 43px (car height) = 437 px
+    car_position = 437 - contestant_votes.sum(:value)
   end
 end
