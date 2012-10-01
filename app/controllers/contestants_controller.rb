@@ -44,12 +44,11 @@ class ContestantsController < ApplicationController
   
   #method definition for vote feature
   def vote
-    user = User.find(current_user)
-    vote = user.contestant_votes.new(value: params[:value], contestant_id: params[:id])    
+    vote = User.find(current_user).contestant_votes.new(value: params[:value], contestant_id: params[:id])    
   
-    if user.contestant_votes.any? == true
+    if User.find(current_user).contestant_votes.any? == true
       time = Time.now
-      last_vote = user.contestant_votes.last.created_at
+      last_vote = User.find(current_user).contestant_votes.last.created_at
       time_span = (time - last_vote) / 3600
       if time_span <= 24
         redirect_to :back, alert: "Unable to vote, only one vote per day."
