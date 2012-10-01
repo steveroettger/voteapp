@@ -26,7 +26,7 @@ $(document).ready(function() {
 			$({y: pageInfo.scrollTop}).animate(
 			    {y: y},
 			    {duration: 2000, step: function(offset){
-			    	FB.Canvas.scrollTo(0, 775);
+			    	FB.Canvas.scrollTo(0, 850);
 			     }
 			});
 		});
@@ -112,7 +112,7 @@ $(document).ready(function() {
 							<section class="footer-main">
 								<div id="profile">
 									<section class="profile-container">
-										<%= image_tag(@contestant.image_url, class: 'contestant-profile') %>
+										<%= image_tag(@contestant.profile_img, class: 'contestant-profile') %>
 										<h1><%= @contestant.name %></h1>
 										<p>Age:&nbsp;<%= @contestant.age %></p>
 										<p>Vocation:&nbsp;<%= @contestant.vocation %></p>
