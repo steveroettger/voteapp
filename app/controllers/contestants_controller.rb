@@ -45,7 +45,7 @@ class ContestantsController < ApplicationController
   #method definition for vote feature
   def vote
     vote = current_user.contestant_votes.new(value: params[:value], contestant_id: params[:id])    
-    if current_user.contestant_votes == nil
+    if current_user.contestant_votes? == nil
       vote.save
       redirect_to :back, notice: "Success!"
     elsif current_user.contestant_votes != nil && ((Time.now - (current_user.contestant_votes.last.created_at)) / 3600) <= 24
