@@ -53,14 +53,14 @@ class ContestantsController < ApplicationController
 #      redirect_to :back, notice: "Success!"
 #    end
     
-    if current_user.contestant_votes == nil
+#    if current_user.contestant_votes == nil
       vote.save
       redirect_to :back, notice: "Success!"
-    elsif current_user.contestant_votes != nil && ((today - last_vote) / 3600) <= 24
-      redirect_to :back, alert: "Unable to vote, only vote per day."
-    else
-      redirect_to :back, alert: "Unable to vote."
-    end
+#    elsif current_user.contestant_votes != nil && ((today - last_vote) / 3600) <= 24
+#      redirect_to :back, alert: "Unable to vote, only vote per day."
+#    else
+#      redirect_to :back, alert: "Unable to vote."
+#    end
   end
   
 end
