@@ -489,8 +489,9 @@ section.profile-container {
 	p { font-family: Cambria, Georgia, serif; }
 	
 	span.vote-counter {
+		text-align: center;
 		font-weight: bold;
-		letter-spacing: 4px; 
+		letter-spacing: 2px; 
 		padding:2px 4px;
 		border: 3px solid $black;
 		background-image: -ms-linear-gradient(top, #FFFFFF 0%, #EDEDEE 100%);
