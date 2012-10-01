@@ -6,7 +6,7 @@ $(document).ready(function() {
 		return false;
 	});
 	
-	$('#countdown').countdown({ date: '17 January 2013 12:00:00'}, function() {
+	$('#countdown').countdown({ date: '19 January 2013 12:00:00'}, function() {
 		$('#countdown').text('Campaign is over.')
 	});
 	
@@ -110,7 +110,7 @@ $(document).ready(function() {
 							<section class="footer-main">
 								<div id="profile">
 									<section class="profile-container">
-										<%= image_tag(@contestant.image_url, class: 'contestant-profile') %>
+										<%# image_tag(@contestant.image_url, class: 'contestant-profile') %>
 										<h1><%= @contestant.name %></h1>
 										<p>Age:&nbsp;<%= @contestant.age %></p>
 										<p>Vocation:&nbsp;<%= @contestant.vocation %></p>
@@ -169,12 +169,9 @@ $(document).ready(function() {
 					    <h3 id="myModalLabel">Carman Fiat Experience Promotion</h3>
 					  </div>
 					  <div class="modal-body">
-					    <p style="text-align: left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
-						   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 	
-						   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-						   dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
-						   id est laborum.</p>
+					    <section style="text-align: left">
+							<%= render 'contestants/fiat_rules' %>
+						</section>
 					  </div>
 					  <div class="modal-footer">
 					    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
@@ -202,12 +199,9 @@ $(document).ready(function() {
 					    <h3 id="myModalLabel">Carman Fiat Experience Promotion</h3>
 					  </div>
 					  <div class="modal-body">
-					    <p style="text-align: left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
-						   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 	
-						   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-						   dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
-						   id est laborum.</p>
+					    <section style="text-align: left">
+							<%= render 'contestants/fiat_rules' %>
+						</section>
 					  </div>
 					  <div class="modal-footer">
 					    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
@@ -235,12 +229,9 @@ $(document).ready(function() {
 					    <h3 id="myModalLabel">Carman Fiat Experience Promotion</h3>
 					  </div>
 					  <div class="modal-body">
-					    <p style="text-align: left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
-						   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 	
-						   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-						   dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
-						   id est laborum.</p>
+					    <section style="text-align: left">
+							<%= render 'contestants/fiat_rules' %>
+						</section>
 					  </div>
 					  <div class="modal-footer">
 					    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
