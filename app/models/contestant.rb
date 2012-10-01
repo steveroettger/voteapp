@@ -7,11 +7,11 @@ class Contestant < ActiveRecord::Base
     read_attribute(:votes) || contestant_votes.sum(:value)
   end
   
-  def self.by_votes
-    select('contestants.*, coalesce(value, 0) as votes').
-    joins('left join contestant_votes on contestant_id=contestants.id').
-    order('votes desc').limit(1)
-  end
+#  def self.by_votes
+#    select('contestants.*, coalesce(value, 0) as votes').
+#    joins('left join contestant_votes on contestant_id=contestants.id').
+#    order('votes desc').limit(1)
+#  end
   
   def car_position
     #total track = 480px

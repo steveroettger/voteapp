@@ -59,4 +59,5 @@ class ContestantsController < ApplicationController
 #    else
 #      redirect_to :back, alert: "Unable to vote."
 #   end
+  end
 end
