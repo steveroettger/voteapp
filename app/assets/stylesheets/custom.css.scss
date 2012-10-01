@@ -164,22 +164,24 @@ section#main-container {
 	
 		section#main-content-tab1 {
 			width: 810px;
-			height: 175px;
+			height: 200px;
 			
 			p { 
 				position: relative;
-				top: 35px;
+				top: 10px;
 				left: 50px;
+				font-family: Cambria, Georgia, serif;
 				font-size: 16px;
+				letter-spacing: 1px;
 				color: #fff; 
 			}
 			
 			.vote-btn-big {
 				float: right;
-				margin:-1px 40px 0 0;
-				width: 232px;
-				height: 176px;
-				background: url('/assets/vote-btn-big.png');
+				margin:-1px 20px 0 0;
+				width: 263px;
+				height: 204px;
+				background: url('/assets/vote-btn-big-2.png');
 			}
 		}
 	
@@ -538,6 +540,17 @@ section#test-driver-form {
 	  -webkit-box-shadow: inset 0 0 2px #000;
 	  box-shadow: inner 0 0 2px #000;
 	}
+}
+
+/*-----------MODAL-----------*/
+#myModalLabel {
+	font-family: Cambria, Georgia, serif;
+	color: $black;
+}
+
+div.modal-body p {
+	font-family: Cambria, Georgia, serif;
+	color: $black;
 }
 
 /*-----------MISC-----------*/

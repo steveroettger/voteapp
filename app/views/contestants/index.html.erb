@@ -70,14 +70,16 @@ $(document).ready(function() {
 		<div id="tab1" class="tab-pane active">
 			<section class="main-content" id="main-content-tab1">
 				<div class="row">
-					<div class="span5">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-					   	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-					   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-					   consequat.</p>
+					<div class="span6">
+						<p>The Carman Fiat Experience feeds your thirst for fun and adventure as your friend competes 
+						   against eight, highly influential and super-driven participants for the chance to Win a FREE 
+						   Fiat 500 for 2013. While you’re here be sure to Enter to Win some cool Fiat swag for 
+						   yourself. Vote and enter to win as often as once a day.</p>
+						<p><b>Experience Carman Fiat, and put life into high gear.</b></p>
+						</p>
 					</div><!--/div.span5-->
 					<div class="vote-btn-big">
-						<%= link_to image_tag('vote-btn-big.png'), '#footer-content', id: 'anchor-footer' %>
+						<%= link_to image_tag('vote-btn-big-2.png'), '#footer-content', id: 'anchor-footer' %>
 					</div><!--/div.vote-btn-big-->
 				</div><!--/div.row-->
 			</section><!--/section.main-content-->
@@ -110,7 +112,7 @@ $(document).ready(function() {
 							<section class="footer-main">
 								<div id="profile">
 									<section class="profile-container">
-										<%# image_tag(@contestant.image_url, class: 'contestant-profile') %>
+										<%= image_tag(@contestant.image_url, class: 'contestant-profile') %>
 										<h1><%= @contestant.name %></h1>
 										<p>Age:&nbsp;<%= @contestant.age %></p>
 										<p>Vocation:&nbsp;<%= @contestant.vocation %></p>
