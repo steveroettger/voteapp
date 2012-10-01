@@ -25,14 +25,20 @@
 	FB.Canvas.setAutoGrow();	
   }
   </script>
-<section id="wrapper">
-  <% flash.each do |name, msg| %>
-    <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
-	  <a class="close" data-dismiss="alert">×</a><!--/.close-->
-	  <%= msg %>
-    </div><!--/.alert.alert-'name'--> 
-  <% end %>
-  <%= yield %>
-</section><!--/section#wrapper-->
+<% if user_likes_page? %>
+	<section id="wrapper">
+	  <% flash.each do |name, msg| %>
+	    <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+		  <a class="close" data-dismiss="alert">×</a><!--/.close-->
+		  <%= msg %>
+	    </div><!--/.alert.alert-'name'--> 
+	  <% end %>
+	  <%= yield %>
+	</section><!--/section#wrapper-->
+<% else %>
+	<section id="fangate">
+		<%= fangate_image %>
+	</section>
+<% end %>
 </body>
 </html>
