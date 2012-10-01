@@ -44,8 +44,8 @@ class ContestantsController < ApplicationController
   
   #method definition for vote feature
   def vote
-    today = Time.now
-    last_vote = current_user.contestant_votes.last.created_at
+ #   today = Time.now
+#    last_vote = current_user.contestant_votes.last.created_at
     vote = current_user.contestant_votes.new(value: params[:value], contestant_id: params[:id])
 #    if ((today - last_vote) / 3600) <= 24
 #      redirect_to :back, alert: "Unable to vote, only vote per day."
