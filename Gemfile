@@ -10,7 +10,7 @@ gem "fbgraph", "~> 1.10.0"
 gem 'omniauth-facebook'
 gem 'activeadmin'
 gem 'rails_config'
-
+gem 'rack-p3p'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
