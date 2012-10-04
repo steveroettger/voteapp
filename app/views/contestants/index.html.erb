@@ -98,7 +98,8 @@ $(document).ready(function() {
 				<div id="contestants">
 					<% @contestants.each do |contestant| %>
 						<a href="<%= contestant_path(contestant) %>" class="contestantImage">
-						<%= image_tag(contestant.image_url) %>						
+						<img src="/assets/<%= contestant.image_url %>" alt="<%= contestant.name %>"></img>
+						<%# image_tag(contestant.image_url) %>
 						</a>
 					<% end %>
 				</div>

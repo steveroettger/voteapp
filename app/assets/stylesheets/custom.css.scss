@@ -47,6 +47,7 @@ section#main-container {
 		width: 240px;
 		height: 105px;
 		color: $white;
+		background: $grayDark; /* IE9andbelow */
 		background: rgba(0,0,0,.6);
 		z-index: 999;
 			
