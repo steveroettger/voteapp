@@ -99,7 +99,7 @@ $(document).ready(function() {
 					<% @contestants.each do |contestant| %>
 						<a href="<%= contestant_path(contestant) %>" class="contestantImage">
 						<img src="/assets/<%= contestant.image_url %>" alt="<%= contestant.name %>"></img>
-						<%# image_tag(contestant.image_url) %>
+						<%# link_to image_tag(contestant.image_url), contestant, class: 'contestantImage' %>
 						</a>
 					<% end %>
 				</div>
