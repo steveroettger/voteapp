@@ -243,9 +243,11 @@ section#main-container {
 				margin:8px 20px 0 0;
 				
 				img {
+					position: relative;
 					width: 55px;
 					height: 60px;
 					&:hover { opacity: 0.7; }
+					z-index: 9999;
 				}
 				
 			 	a { 
@@ -277,7 +279,7 @@ section#main-container {
 						border-top-right-radius: 20px;
 						 
 						h2 { 
-							font-size: 24px;
+							font-size: 1.75em;
 							font-family: Cambria, Georgia, serif;
 							color: $pink; 
 							text-shadow: 1px 1px 3px $black;
