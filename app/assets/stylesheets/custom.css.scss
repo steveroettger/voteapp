@@ -24,7 +24,7 @@ $green: #72BC42;
 /*-----------INDEX-----------*/
 section#main-container {
 	width: 810px;
-	/* height: 1215px; */
+	/*--height: 1215px;--*/
 	
 	section#fangate {
 		img { 
@@ -93,6 +93,7 @@ section#main-container {
 				height: 3px;  
 				padding:0 3px 0 3px;
 				color: rgba(0,0,0,.2);
+				background: $grayDark; /* IE9andbelow */
 				background-color: rgba(0,0,0,.2); 
 				border: none;
 			}
@@ -269,7 +270,7 @@ section#main-container {
 					margin-bottom: 0;
 					border: none;
 					li { 
-						padding:15px 24px 15px 24px;
+						padding:15px 20px 15px 20px;
 						background: $grayLight;
 						-webkit-border-top-left-radius: 5px;
 						-webkit-border-top-right-radius: 20px;

@@ -97,7 +97,9 @@ $(document).ready(function() {
 			<section id="footer-content">
 				<div id="contestants">
 					<% @contestants.each do |contestant| %>
-						<%= link_to image_tag(contestant.image_url), contestant, class: 'contestantImage' %>
+						<a href="<%= contestant_path(contestant) %>" class="contestantImage">
+						<%= image_tag(contestant.image_url) %>						
+						</a>
 					<% end %>
 				</div>
 				
