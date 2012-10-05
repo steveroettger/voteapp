@@ -6,10 +6,6 @@ $(document).ready(function() {
 		return false;
 	});
 	
-	$('#countdown').countdown({ date: '19 January 2013 12:00:00'}, function() {
-		$('#countdown').text('Campaign is over.')
-	});
-	
 	$('#activate-tab-link').click(function (f){
 		f.preventDefault();
 		$('.tab2').tab('show').addClass('active');
@@ -33,10 +29,10 @@ $(document).ready(function() {
 	});
 });
 </script>
-<section id="main-container">
-	<section id="main-header">
-		<section id="logo"></section>
-		<section id="countdown">
+<section class="main-container">
+	<section class="main-header">
+		<section class="logo"></section>
+		<section class="countdown">
 			<h1>FIAT EXPERIENCE COUNTDOWN</h1>
 			<table class="table">
 				<thead>
@@ -54,8 +50,8 @@ $(document).ready(function() {
 					</tr>
 				</tbody>
 			</table><!--/table.table-->
-		</section><!--/section#countdown-->
-	</section><!--/section#main-header-->
+		</section><!--/section.countdown-->
+	</section><!--/section.main-header-->
 	
 	<section id="tabbed-nav">
 		<ul class="tabs">
@@ -241,5 +237,5 @@ $(document).ready(function() {
 			</section><!--/section.mini-footer-->
 		</div><!--/div#tab3.tab-pane-->
 	</div><!--/div.tab-content-->
-</section>
+</section><!--/section.main-container-->
 

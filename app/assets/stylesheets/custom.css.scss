@@ -20,7 +20,7 @@ $red: #D92128;
 $green: #72BC42;
 
 /*-----------INDEX-----------*/
-section#main-container {
+section.main-container {
 	width: 810px;
 	/*--height: 1215px;--*/
 	
@@ -31,7 +31,7 @@ section#main-container {
 		}
 	}
 	
-	section#logo {
+	section.logo {
 		float: left;
 		margin:30px 0 0 30px;
 		width: 200px;
@@ -39,7 +39,7 @@ section#main-container {
 		background: url('/assets/fiat-logo.png');
 	}
 	
-	section#countdown {
+	section.countdown {
 		float: right;
 		margin-right: 40px;
 		width: 240px;
@@ -99,7 +99,7 @@ section#main-container {
 		}
 	}
 	
-	section#main-header {
+	section.main-header {
 		width: 810px;
 		height: 403px;
 		background: url('/assets/main-header-img.jpg') no-repeat;
@@ -161,6 +161,12 @@ section#main-container {
 		background-image: -webkit-linear-gradient(top, #00B19F 0%, #006A60 100%);
 		background-image: linear-gradient(to bottom, #00B19F 0%, #006A60 100%);
 		border-bottom: 5px solid $green;
+	}
+	
+	section#main-content-home {
+		width: 810px;
+		height: 250px;
+		border-top: 3px solid $white;
 	}
 	
 	div#tab1 {	
@@ -246,8 +252,6 @@ section#main-container {
 					position: relative;
 					width: 55px;
 					height: 60px;
-					&:hover { opacity: 0.7; }
-					z-index: 9999;
 				}
 				
 			 	a { 

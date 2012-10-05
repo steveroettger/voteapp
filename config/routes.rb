@@ -9,6 +9,7 @@ FacebookApp::Application.routes.draw do
   resources :contestants do
     member { post :vote }
   end
+  match 'home', to: 'pages#home'
   resources :test_drivers
   resources :giveaway_entries
   match 'auth/:provider/callback', to: 'sessions#create'

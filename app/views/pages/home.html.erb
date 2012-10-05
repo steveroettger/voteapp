@@ -1,1 +1,52 @@
-<h1>Home Page</h1>
+<section class="main-container">
+	<section class="main-header">
+		<section class="logo"></section>
+		<section class="countdown">
+			<h1>FIAT EXPERIENCE COUNTDOWN</h1>
+			<table class="table">
+				<thead>
+					<tr>
+						<th><hr class="divider"><span class="desc">Days</span></th>
+						<th><hr class="divider"><span class="desc">Hours</span></th>
+						<th><hr class="divider"><span class="desc">Minutes</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="days digit">00</span></td>
+						<td><span class="hours digit">00</span></td>
+						<td><span class="mins digit">00</span></td>
+					</tr>
+				</tbody>
+			</table><!--/table.table-->
+		</section><!--/section.countdown-->
+	</section><!--/section.main-header-->
+	
+	<section class="main-content" id="main-content-home">
+	
+	</section><!--/section.main-content-->
+	<hr class="white">
+	<section class="mini-footer">
+		<section class="termsLink">
+			<a href="#Modalhome" role="button" data-toggle="modal">
+				Carman Fiat Experience Promotion Rules &amp; Responsibilities
+			</a>
+			<!-- Modal -->
+			<div class="modal hide fade in" id="Modalhome" tabindex="-1" role="dialog" 
+				 aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-header">
+			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			    <h3 id="myModalLabel">Carman Fiat Experience Promotion</h3>
+			  </div>
+			  <div class="modal-body">
+			    <section style="text-align: left">
+					<%= render 'contestants/fiat_rules' %>
+				</section>
+			  </div>
+			  <div class="modal-footer">
+			    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			  </div>
+			</div>
+		</section>
+	</section><!--/section.mini-footer-->
+</section><!--/section.main-container-->
