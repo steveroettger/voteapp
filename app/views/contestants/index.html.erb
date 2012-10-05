@@ -1,6 +1,6 @@
 <script>
 $(document).ready(function() {
-	$('.contestantImage').on('click',function(){
+	$('.contestantImage').click(function(){
 		var url = $(this).attr('href');
 		$('#profile').load(url);
 		return false;
