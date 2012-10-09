@@ -14,6 +14,14 @@ ActiveAdmin.register ContestantVote do
     default_actions
   end
   
+  csv do
+      column :id
+      column :user_id
+      column :contestant_id
+      column :value
+      column :created_at
+  end
+  
   scope :all, :default => true
   scope :by_contestant do |contestant_votes|
     contestant_votes.where(:contestant_id == 1)
