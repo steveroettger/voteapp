@@ -12,6 +12,31 @@
 		<ul>
 			<li><%= link_to facebook_icon, @contestant.fb_link, target: '_blank' %></li>
 			<li><%= link_to twitter_icon, @contestant.twitter_link, target: '_blank' %></li>
+			<% if @contestant.youtube_link? %>
+			<li>
+				<a href="#contestant-video" role="button" data-toggle="modal">
+					<img src= "/assets/youtube.png" />
+				</a>
+			</li>
+			<% end %>
+			<div class="modal hide fade in" id="contestant-video" tabindex="-1" role="dialog" 
+				 aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-header">
+			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			    <h3 id="myModalLabel" style="text-align: center;">
+					<%= @contestant.name + "'s" + " " %>Video
+				</h3>
+			  </div><!--/div.modal-header-->
+			  <div class="modal-body">
+			    <iframe class="youtube-player" type="text/html" width="530" height="315" 
+				src="<%= @contestant.youtube_link %>" frameborder="0" allowfullscreen></iframe>
+			  </div><!--/div.modal-body-->
+			  <div class="modal-footer">
+			    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			  </div><!--/div.modal-footer-->
+			</div><!--/div.modal.hide.fade.in-->
 		</ul>
 	</section><!--/section.profile-container-->
 </section><!--/section#profile-container-->
+
+

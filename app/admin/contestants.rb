@@ -10,6 +10,7 @@ ActiveAdmin.register Contestant do
       column :vocation
       column :fb_link
       column :twitter_link
+      column :youtube_link
       column :image_url
       column :profile_img
       
@@ -25,6 +26,7 @@ ActiveAdmin.register Contestant do
         row :bio
         row :fb_link
         row :twitter_link
+        row :youtube_link
         row :image_url
         row :profile_img
         row :created_at
@@ -40,6 +42,7 @@ ActiveAdmin.register Contestant do
         f.input :vocation
         f.input :fb_link
         f.input :twitter_link
+        f.input :youtube_link
         f.input :image_url
         f.input :profile_img
         f.input :bio

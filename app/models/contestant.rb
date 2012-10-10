@@ -1,5 +1,5 @@
 class Contestant < ActiveRecord::Base
-  attr_accessible :name, :image_url, :age, :vocation, :bio, :fb_link, :twitter_link, :profile_img
+  attr_accessible :name, :image_url, :age, :vocation, :bio, :fb_link, :twitter_link, :youtube_link, :profile_img
   
   has_many :contestant_votes
   

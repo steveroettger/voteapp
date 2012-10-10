@@ -18,6 +18,10 @@ module ApplicationHelper
     image_tag('twitter.png', border: 0)
   end
   
+  def youtube_icon
+    image_tag('youtube.png', border: 0)
+  end
+  
   def linkedin_icon
     image_tag('linkedin.png', border: 0)
   end
