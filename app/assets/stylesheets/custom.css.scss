@@ -319,7 +319,7 @@ section.main-container {
 	
 		section#footer-content {
 			width: 810px;
-			height: 670px;
+			height: 735px;
 			background: $gray; /* IE9andbelow */
 			background-image: -ms-linear-gradient(bottom, #7A7A6F 0%, #403F38 100%);
 			background-image: -moz-linear-gradient(bottom, #7A7A6F 0%, #403F38 100%);
@@ -328,9 +328,19 @@ section.main-container {
 			background-image: -webkit-linear-gradient(bottom, #7A7A6F 0%, #403F38 100%);
 			background-image: linear-gradient(to top, #7A7A6F 0%, #403F38 100%);
 			
+			h4 { 
+				padding-top:30px; 
+				text-align: center; 
+				font-family: Cambria, Georgia, serif;
+				text-shadow: 1px 1px 3px #000;
+				color: $white; 
+				margin:0; 
+				line-height: 0;				
+			}
+			
 			div#contestants { 
 				float: right;
-				margin:8px 20px 0 0;
+				margin:20px 20px 0 0;
 				
 				img {
 					position: relative;
@@ -635,7 +645,7 @@ section#test-driver-form {
 /*-----------MODAL-----------*/
 #myModalLabel {
 	font-family: Cambria, Georgia, serif;
-	color: $black;
+	color: $black; 
 }
 
 div.modal-body p {
