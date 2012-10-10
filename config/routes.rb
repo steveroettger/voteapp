@@ -4,12 +4,13 @@ FacebookApp::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   #resources :admin_users
-
-  root to: 'contestants#index'
+  
+  root to: 'pages#home'
+  #root to: 'contestants#index'
   resources :contestants do
     member { post :vote }
   end
-  match 'home', to: 'pages#home'
+  #match 'home', to: 'pages#home'
   resources :test_drivers
   resources :giveaway_entries
   match 'auth/:provider/callback', to: 'sessions#create'

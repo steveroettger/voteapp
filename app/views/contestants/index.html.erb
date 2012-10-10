@@ -91,6 +91,12 @@ $(document).ready(function() {
 			</section><!--/section#giveaway-block-->
 			
 			<section id="footer-content">
+				<% flash.each do |name, msg| %>
+				    <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+					  <a class="close" data-dismiss="alert">×</a><!--/.close-->
+					  <%= msg %>
+				    </div><!--/.alert.alert-'name'--> 
+				 <% end %>
 				<div id="contestants">
 					<% @contestants.each do |contestant| %>
 						<a href="<%= contestant_path(contestant) %>" class="contestantImage">
@@ -138,12 +144,12 @@ $(document).ready(function() {
 												</div><!--/div.car-->
 											</div><!--/div.tracks-inner-->
 											<div class="vote-btn">
-												<% if current_user == nil %>
-													<%= link_to vote_text, "/auth/facebook" %>
-												<% else %>
+												<%# if current_user == nil %>
+													<%# link_to vote_text, "/auth/facebook" %>
+												<%# else %>
 													<%= link_to vote_text, vote_contestant_path(contestant, value: 1), 
 														method: "post" %>
-												<% end %>
+												<%# end %>
 											</div><!--/div.vote-btn-->
 										</div><!--/div.tracks-->
 									<% end %>
