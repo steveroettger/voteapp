@@ -12,6 +12,7 @@ gem 'activeadmin'
 gem 'rails_config'
 gem 'rack-p3p'
 gem "figaro", "~> 0.4.1"
+gem "heroku"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
