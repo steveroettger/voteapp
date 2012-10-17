@@ -10,7 +10,8 @@ class TestDriversController < ApplicationController
   def create
     @test_driver = TestDriver.new(params[:test_driver])
     if @test_driver.save
-      redirect_to new_test_driver_path, notice: 'Success.'
+      TestDriverMailer.new_test_driver(@test_driver).deliver
+      redirect_to new_test_driver_path
     else
       render 'new'
     end

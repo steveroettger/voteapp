@@ -15,7 +15,7 @@ class Contestant < ActiveRecord::Base
     #else
     #  car_position = 437 - contestant_votes.sum(:value)
     #end
-    updated_vote = contestant_votes.sum(:value) * 0.60
+    updated_vote = contestant_votes.sum(:value) * 0.50
     
     if contestant_votes.sum(:value) >= 150
       if 437 - updated_vote <= 50

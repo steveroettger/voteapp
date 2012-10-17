@@ -12,7 +12,7 @@ class GiveawayEntriesController < ApplicationController
   def create
     @giveaway_entry = GiveawayEntry.new(params[:giveaway_entry])
     if @giveaway_entry.save
-      redirect_to new_giveaway_entry_path, notice: 'Success.'
+      redirect_to new_giveaway_entry_path
     else
       render 'new'
     end

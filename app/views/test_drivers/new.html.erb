@@ -1,9 +1,9 @@
 <section id="test-driver-form">
 	<h1>Grab Your Experience. Test Drive a Fiat 500!</h1>
 	<%= simple_form_for @test_driver, :html => { class: 'form-vertical' } do |f| %>
-		<%= f.input :name %>
-		<%= f.input :email %>
-		<%= f.input :phone %>
+		<%= f.input :name, placeholder: "First & Last Name" %>
+		<%= f.input :email, placeholder: "example@example.com" %>
+		<%= f.input :phone, placeholder: "XXX-XXX-XXXX" %>
 		<%= f.submit "Submit", class: "btn btn-large" %>
 	<% end %>
 </section><!--/section#test-driver-form-->

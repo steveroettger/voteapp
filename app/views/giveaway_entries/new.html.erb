@@ -1,8 +1,8 @@
 <section id="giveaway-entry-form">
 	<h1>Enter Info below for a Chance to Win Awesome Prizes from Fiat.</h1>
 	<%= simple_form_for @giveaway_entry, :html => { class: 'form-vertical' } do |f| %>
-		<%= f.input :name %>
-		<%= f.input :email %>
+		<%= f.input :name, placeholder: "First & Last Name" %>
+		<%= f.input :email, placeholder: "example@example.com" %>
 		<%= f.submit "Submit", class: "btn btn-large" %>
 	<% end %>
 </section><!--/section#test-driver-form-->

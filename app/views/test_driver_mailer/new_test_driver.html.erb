@@ -1,0 +1,8 @@
+<p>Carman Fiat Experience Test Driver Information:</p>
+===============================================
+
+<p><%= @test_driver.name %></p>
+<p><%= @test_driver.email %></p>
+<% if @test_driver.phone? %>
+	<p><%= @test_driver.phone %></p>
+<% end %>

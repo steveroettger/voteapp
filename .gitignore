@@ -26,3 +26,7 @@ doc/
 /config/heroku.yml
 /config/initializers/omniauth.rb
 
+/config/application.yml
+
+# Ignore application configuration
+/config/application.yml

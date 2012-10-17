@@ -11,8 +11,8 @@
   <meta property="og:type" content="company" />
   <meta property="og:url" content="http://carmanfiat.com" /> 
   <meta property="og:site_name" content="Carman Fiat Experience" />
-  <meta property="fb:app_id" content="213582692103701" />
-  <meta property="fb:admins" content="11307510" />
+  <meta property="fb:app_id" content= ENV["FACEBOOK_APP_ID"] />
+  <meta property="fb:admins" content= ENV["FACEBOOK_ADMIN"] />
   <script>
   $(document).ready(function() {
   	if (window.location.hash == '#_=_')window.location.hash = '';
@@ -29,7 +29,7 @@
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-	  appId  : '213582692103701',
+	  appId  : "213582692103701",
 	  status : true, // check login status 
 	  cookie : true, // enable cookies to allow the server to access the session
 	  xfbml  : true, // parse XFBML
