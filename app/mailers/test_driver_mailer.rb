@@ -8,6 +8,6 @@ class TestDriverMailer < ActionMailer::Base
   #
   def new_test_driver(test_driver)
     @test_driver = test_driver    
-    mail to: "steve@steveroettger.com", cc: "steve.roettger@gmail.com", subject: "New Carman Fiat Experience Test Driver"
+    mail to: "Dang@carmanautogroup.com", cc: ["Walt@imsolutions.us", "Bernie@imsolutions.us"], subject: "New Carman Fiat Experience Test Driver"
   end
 end
