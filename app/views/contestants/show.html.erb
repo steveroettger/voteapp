@@ -3,6 +3,7 @@
 		<% if @contestant.youtube_link? %>
 		<a href="#contestant-video" role="button" data-toggle="modal">
 			<%= image_tag(@contestant.profile_img, class: 'contestant-profile') %>
+			<img src="/assets/playbutton.png" class="playbutton"/>
 		</a>
 		<div class="modal hide fade in" id="contestant-video" tabindex="-1" role="dialog" 
 			 aria-labelledby="myModalLabel" aria-hidden="true">

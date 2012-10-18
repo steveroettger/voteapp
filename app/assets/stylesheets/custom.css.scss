@@ -556,6 +556,7 @@ section#main-profile {
 }
 
 section.profile-container {
+	position: relative;
 	width: 250px;
 	margin-left: 10px; 
 	
@@ -564,6 +565,12 @@ section.profile-container {
 		width: 250px; 
 		height: 145px;
 		background: #171816;
+	}
+	
+	img.playbutton {
+		position: absolute;
+		top: 65px;
+		left: 91px;
 	}
 	
 	h1 { font-family: Cambria, Georgia, serif; font-size: 18px; }
