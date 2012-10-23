@@ -28,7 +28,13 @@
 		<p>Age:&nbsp;<%= @contestant.age %></p>
 		<p>Vocation:&nbsp;<%= @contestant.vocation %></p>
 		<p><strong>Current Vote Talley:&nbsp;</strong>
-			<span class="vote-counter"><%= @contestant.votes %></span>
+			<span class="vote-counter">
+				<% if @contestant.test_drive_votes? %>
+					<%= (@contestant.votes + @contestant.test_drive_votes) %>
+				<% else %>
+					<%= @contestant.votes %>
+				<% end %>
+			</span>
 		</p>
 		<hr class="profile">
 		<p><%= @contestant.bio %></p>

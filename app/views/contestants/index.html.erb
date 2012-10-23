@@ -147,7 +147,13 @@ $(document).ready(function() {
 										<p>Age:&nbsp;<%= @contestant.age %></p>
 										<p>Vocation:&nbsp;<%= @contestant.vocation %></p>
 										<p><strong>Current Vote Talley:&nbsp;</strong>
-											<span class="vote-counter"><%= @contestant.votes %></span>
+											<span class="vote-counter">
+												<% if @contestant.test_drive_votes? %>
+													<%= (@contestant.votes + @contestant.test_drive_votes) %>
+												<% else %>
+													<%= @contestant.votes %>
+												<% end %>
+											</span>
 										</p>
 										<hr class="profile">
 										<p><%= @contestant.bio %></p>
@@ -164,7 +170,12 @@ $(document).ready(function() {
 											<div class="tracks-inner">
 												<div class="car" 
 													 style="position: relative; 
-														    top: <%= contestant.car_position %>px; 
+														    top:
+														 		<% if contestant.test_drive_votes? %>
+																	<%= (contestant.car_position - (contestant.test_drive_votes * 0.05)) %>px; 
+																<% else %>
+																	<%= contestant.car_position %>px; 
+																<% end %>
 														    right: 5px;
 														    text-align: center;">
 												</div><!--/div.car-->

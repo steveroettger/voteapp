@@ -13,6 +13,7 @@ ActiveAdmin.register Contestant do
       column :youtube_link
       column :image_url
       column :profile_img
+      column :test_drive_votes
       
       default_actions
     end
@@ -29,6 +30,7 @@ ActiveAdmin.register Contestant do
         row :youtube_link
         row :image_url
         row :profile_img
+        row :test_drive_votes
         row :created_at
         row :updated_at
       end
@@ -46,6 +48,7 @@ ActiveAdmin.register Contestant do
         f.input :image_url
         f.input :profile_img
         f.input :bio
+        f.input :test_drive_votes
       end
       f.buttons
     end

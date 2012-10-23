@@ -1,5 +1,5 @@
 class Contestant < ActiveRecord::Base
-  attr_accessible :name, :image_url, :age, :vocation, :bio, :fb_link, :twitter_link, :youtube_link, :profile_img
+  attr_accessible :name, :image_url, :age, :vocation, :bio, :fb_link, :twitter_link, :youtube_link, :profile_img, :test_drive_votes
   
   has_many :contestant_votes
   
@@ -15,16 +15,16 @@ class Contestant < ActiveRecord::Base
     #else
     #  car_position = 437 - contestant_votes.sum(:value)
     #end
-    updated_vote = (contestant_votes.sum(:value) * 0.80) * 0.40
+    updated_vote = (contestant_votes.sum(:value) * 0.70) * 0.30
     
-    if (contestant_votes.sum(:value) * 0.80) >= 150
+    if (contestant_votes.sum(:value) * 0.70) >= 120
       if 437 - updated_vote <= 50
         car_position = 50
       else
         car_position = 437 - updated_vote
       end
     else
-      car_position = (437 - (contestant_votes.sum(:value) * 0.80))
+      car_position = (437 - (contestant_votes.sum(:value) * 0.70))
     end
   end  
 end
