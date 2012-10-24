@@ -6,6 +6,18 @@ class Contestant < ActiveRecord::Base
   def votes
     read_attribute(:votes) || contestant_votes.sum(:value)
   end
+  
+  def test_drive_vote_count
+    read_attribute(:test_drive_votes)
+  end
+  
+  def total_votes
+    if test_drive_vote_count == nil
+      contestant_votes.sum(:value)
+    else
+      contestant_votes.sum(:value) + test_drive_vote_count
+    end
+  end
     
   def car_position
     #total track = 480px
@@ -15,16 +27,39 @@ class Contestant < ActiveRecord::Base
     #else
     #  car_position = 437 - contestant_votes.sum(:value)
     #end
-    updated_vote = (contestant_votes.sum(:value) * 0.80) * 0.35
-    
-    if (contestant_votes.sum(:value) * 0.80) >= 100
-      if 437 - updated_vote <= 50
-        car_position = 50
+    case total_votes
+      when total_votes >= 2000
+        car_position = 100
+      when total_votes = 1500 .. 1999
+        car_position = 150
+      when total_votes = 1000 .. 1499
+        car_position = 200
+      when total_votes = 500 .. 999
+        car_position = 250  
+      when total_votes = 250 .. 499
+        car_position = 300
+      when total_votes = 100 .. 249
+        car_position = 350
+      when total_votes = 50 .. 99
+        car_position = 375
+      when total_votes = 1 .. 49
+        car_position = 400
       else
-        car_position = 437 - updated_vote
-      end
-    else
-      car_position = (437 - (contestant_votes.sum(:value) * 0.80))
+        car_position = 437
     end
-  end  
+  end
+    
+    
+    #updated_vote = (contestant_votes.sum(:value) * 0.80) * 0.35
+    
+    #if (contestant_votes.sum(:value) * 0.80) >= 100
+      #if 437 - updated_vote <= 50
+        #car_position = 50
+      #else
+        #car_position = 437 - updated_vote
+      #end
+    #else
+      #car_position = (437 - (contestant_votes.sum(:value) * 0.80))
+    #end
+  #end  
 end

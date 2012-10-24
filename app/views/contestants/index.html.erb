@@ -146,15 +146,7 @@ $(document).ready(function() {
 										<h1><%= @contestant.name %></h1>
 										<p>Age:&nbsp;<%= @contestant.age %></p>
 										<p>Vocation:&nbsp;<%= @contestant.vocation %></p>
-										<p><strong>Current Vote Talley:&nbsp;</strong>
-											<span class="vote-counter">
-												<% if @contestant.test_drive_votes? %>
-													<%= (@contestant.votes + @contestant.test_drive_votes) %>
-												<% else %>
-													<%= @contestant.votes %>
-												<% end %>
-											</span>
-										</p>
+										<p><strong>Current Vote Talley:&nbsp;</strong><span class="vote-counter"><%= @contestant.total_votes %></span></p>
 										<hr class="profile">
 										<p><%= @contestant.bio %></p>
 										<ul>
@@ -170,12 +162,7 @@ $(document).ready(function() {
 											<div class="tracks-inner">
 												<div class="car" 
 													 style="position: relative; 
-														    top:
-														 		<% if contestant.test_drive_votes? %>
-																	<%= (contestant.car_position - (contestant.test_drive_votes * 0.05)) %>px; 
-																<% else %>
-																	<%= contestant.car_position %>px; 
-																<% end %>
+														    top:<%= contestant.car_position %>px; 
 														    right: 5px;
 														    text-align: center;">
 												</div><!--/div.car-->
