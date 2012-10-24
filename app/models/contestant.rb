@@ -28,7 +28,9 @@ class Contestant < ActiveRecord::Base
     #  car_position = 437 - contestant_votes.sum(:value)
     #end
     case total_votes
-      when total_votes >= 2000
+      when total_votes > 2500
+        car_position = 100
+      when total_votes = 2000 .. 2499
         car_position = 100
       when total_votes = 1500 .. 1999
         car_position = 150
