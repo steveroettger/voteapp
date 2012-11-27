@@ -30,15 +30,15 @@ class Contestant < ActiveRecord::Base
     
     #SQL QUERY MAX(contestant_votes.sum(:value))
     case total_votes
-      when total_votes = 7000 .. 10000
+      when total_votes = 12000 .. 15000
         car_position = 10
-      when total_votes = 6000 .. 6999
+      when total_votes = 10000 .. 11999
         car_position = 25
-      when total_votes = 5000 .. 5999
+      when total_votes = 9000 .. 9999
         car_position = 50
-      when total_votes = 4000 .. 4999
+      when total_votes = 6000 .. 8999
         car_position = 75
-      when total_votes = 3000 .. 3999
+      when total_votes = 3000 ..5999
         car_position = 100
       when total_votes = 2000 .. 2999
         car_position = 150
