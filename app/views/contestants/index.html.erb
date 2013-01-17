@@ -168,12 +168,8 @@ $(document).ready(function() {
 												</div><!--/div.car-->
 											</div><!--/div.tracks-inner-->
 											<div class="vote-btn">
-												<%# if current_user == nil %>
-													<%# link_to vote_text, "/auth/facebook" %>
-												<%# else %>
-													<%= link_to vote_text, vote_contestant_path(contestant, value: 1), 
-														method: "post" %>
-												<%# end %>
+												<%# link_to vote_text, "#" %>
+												<%= link_to vote_text, vote_contestant_path(contestant, value: 1), method: "post" %>
 											</div><!--/div.vote-btn-->
 										</div><!--/div.tracks-->
 									<% end %>
