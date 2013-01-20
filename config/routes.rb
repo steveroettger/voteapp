@@ -5,7 +5,8 @@ FacebookApp::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   #resources :admin_users
   
-  root to: 'pages#home'
+  root to: 'pages#finale'
+  #root to: 'pages#home'
   #root to: 'contestants#index'
   resources :contestants do
     member { post :vote }
